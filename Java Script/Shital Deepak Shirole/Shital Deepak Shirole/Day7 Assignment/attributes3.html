@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback Form</title>
+  <style>
+    form {
+      width: 70%;
+      margin: auto;
+    }
+    input, textarea {
+      margin: 10px;
+      width: 100%;
+    }
+
+    .err {
+      color: red;
+    }
+    .success {
+      color: green;
+      font-size: x-large;
+    }
+  </style>
+</head>
+<body>
+  <h2>Feedback Form</h2>
+  <form id="form1" action="#" novalidate>
+    <label for="id">ID:</label><br>
+    <input type="text" id="id" name="id" required><br>
+    <span id="idError" class="err"></span><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" readonly value="example@example.com"><br>
+
+    <label for="feedback">Feedback (Minimum 10, Maximum 200 characters):</label><br>
+    <textarea id="feedback" name="feedback" rows="4" cols="50" minlength="10" maxlength="200" required></textarea><br>
+    <span id="feedbackError" class="err"></span><br>
+
+    <label for="submittime">Submit Time:</label><br>
+    <input type="text" id="submittime" name="submittime" value="12:00 PM" disabled><br>
+
+    <button type="submit">Submit</button><br>
+
+    <span id="successMsg" class="success"></span>
+  </form>
+
+  <script>
+    function $(id) {
+      return document.getElementById(id);
+    }
+    $("form1").onsubmit = function(evt) {
+      evt.preventDefault();
+      console.log("Form submitted!");
+
+      let formIsValid = true;
+
+      $("idError").textContent = "";
+      $("feedbackError").textContent = "";
+      $("successMsg").textContent = "";
+
+      const id = $("id");
+      const feedback = $("feedback");
+
+      if (!id.checkValidity()) {
+        formIsValid = false;
+        if (id.validity.valueMissing) {
+          $("idError").textContent = "ID is mandatory!";
+        }
+      }
+
+      if (!feedback.checkValidity()) {
+        formIsValid = false;
+        if (feedback.validity.valueMissing) {
+          $("feedbackError").textContent = "Feedback is mandatory!";
+        } else if (feedback.validity.tooShort) {
+          $("feedbackError").textContent = "Feedback must be at least 10 characters!";
+        } else if (feedback.validity.tooLong) {
+          $("feedbackError").textContent = "Feedback must be less than 200 characters!";
+        }
+      }
+
+      if (formIsValid) {
+        $("successMsg").textContent = "Form Submitted Successfully!";
+      }
+    };
+  </script>
+</body>
+</html>

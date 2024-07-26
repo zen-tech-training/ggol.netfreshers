@@ -1,0 +1,5 @@
+/* Select the first <p> element that immediately follows <div> elements */
+div + p {
+    font-weight: bold;
+    color: blue;
+  }

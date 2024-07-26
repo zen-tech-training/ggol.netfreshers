@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <title>POST Request</title>
+</head>
+
+<body>
+        <button onclick="makePostRequest()">Send Data</button>
+        <p id="postResponse"></p>
+
+       
+    <script>
+        function makeGetRequest() {
+            var url = 'https://jsonplaceholder.typicode.com/invalid-url';
+            var xhttp = new XMLHttpRequest();
+            xhttp.open('POST', url, {
+                name: 'Shary',
+                age: 23
+            });
+            xhttp.send();
+
+            xhttp.onload = () => {
+                if (xhttp.readyState === 4) {
+                    if (xhttp.status === 200) {
+                        var ele = document.createElement('div');
+                        ele.innerText = xhttp.responseText;
+                        document.body.appendChild(ele);
+                    }
+                }
+            }
+        } 
+    </script>
+</body>
+
+</html>

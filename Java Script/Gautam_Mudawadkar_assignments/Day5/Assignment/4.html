@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>POST Request</title>
+
+</head>
+
+<body>
+
+<button onclick="makePostRequest()">Send Data</button>
+
+<p id="postResponse"></p>
+
+<script>
+    var url="https://jsonplaceholder.typicode.com/posts";
+    var xhttp=new XMLHttpRequest();
+
+    function makePostRequest()
+    {
+        
+ 
+        xhttp.onreadystatechange=()=>{
+            if(xhttp.readyState==4 && xhttp.status==201)
+            {
+               
+                   console.log("Post request send successfully")
+                   document.getElementById('postResponse').innerHTML=xhttp.responseText;
+                   
+                   
+               
+              
+            }
+        else {
+            console.log(xhttp.status);
+        }
+
+       
+        }
+   
+
+
+        xhttp.open("POST",url,true);
+        xhttp.setRequestHeader('Content-Type','application/json;charset=UTF-8');
+        xhttp.send(JSON.stringify({
+            "userId": 10,
+            "title": "alllo da paratha",
+            "body": "Body is body not a body hehe"
+
+        }))
+
+
+    }
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+/* responsive_typography.css */
+
+/* Reset some default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Default typography styles */
+h1 {
+    font-size: 24px; /* Default font size for h1 */
+}
+
+h2 {
+    font-size: 20px; /* Default font size for h2 */
+}
+
+h3 {
+    font-size: 18px; /* Default font size for h3 */
+}
+
+p {
+    font-size: 16px; /* Default font size for paragraphs */
+    line-height: 1.6; /* Line height for readability */
+    margin-bottom: 20px; /* Bottom margin for paragraphs */
+}
+
+/* Media queries for responsive typography */
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 28px; /* Increase font size for h1 on larger screens */
+    }
+    h2 {
+        font-size: 24px; /* Increase font size for h2 on larger screens */
+    }
+    h3 {
+        font-size: 20px; /* Increase font size for h3 on larger screens */
+    }
+    p {
+        font-size: 18px; /* Increase font size for paragraphs on larger screens */
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    h1 {
+        font-size: 32px; /* Further increase font size for h1 on even larger screens */
+    }
+    h2 {
+        font-size: 28px; /* Further increase font size for h2 on even larger screens */
+    }
+    h3 {
+        font-size: 24px; /* Further increase font size for h3 on even larger screens */
+    }
+    p {
+        font-size: 20px; /* Further increase font size for paragraphs on even larger screens */
+    }
+}

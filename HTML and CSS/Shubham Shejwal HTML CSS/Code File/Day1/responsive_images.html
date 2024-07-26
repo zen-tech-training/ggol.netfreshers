@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Images Example</title>
+    <style>
+      /* CSS for responsive images */
+      img {
+        max-width: 100%; /* Ensure images don't exceed their container */
+        height: auto; /* Maintain image aspect ratio */
+        display: block; /* Ensure images are block-level elements */
+        margin: 0 auto; /* Center align images */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Responsive Images Example</h1>
+
+    <!-- Large image with srcset and sizes attributes -->
+    <img
+      src="large-image.jpg"
+      srcset="
+        large-image-400.jpg   400w,
+        large-image-800.jpg   800w,
+        large-image-1200.jpg 1200w
+      "
+      sizes="(max-width: 600px) 400px, 800px"
+      alt="Responsive large image"
+    />
+  </body>
+</html>

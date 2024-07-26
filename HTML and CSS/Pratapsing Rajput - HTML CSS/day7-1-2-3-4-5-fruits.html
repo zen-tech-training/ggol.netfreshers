@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #1d1818;
+        /* background-color: #f2f2f2; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      p {
+        font-weight: 700;
+        margin-top: 0;
+      }
+
+      .selection {
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 10px;
+        width: 200px;
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+
+      .selection:focus {
+        outline: none;
+        border-color: rgb(165, 0, 0);
+        box-shadow: 0 0 5px rgba(165, 0, 0, 0.5);
+      }
+
+      select[multiple] {
+        height: auto;
+        min-height: 100px;
+      }
+
+      optgroup {
+        font-weight: bold;
+      }
+
+      option[disabled] {
+        color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p>
+        1: Basic Dropdown Menu: Create a simple dropdown menu with a list of
+        fruits.
+      </p>
+      <select class="selection">
+        <option value="apple">Apple</option>
+        <option value="banana">Banana</option>
+        <option value="orange">Orange</option>
+        <option value="strawberry">Strawberry</option>
+        <option value="grape">Grape</option>
+      </select>
+
+      <p>
+        2: Pre-selected Option Create a dropdown menu where "Banana" is
+        pre-selected by default. Hint: - Selected attribute
+      </p>
+      <select class="selection">
+        <option value="apple">Apple</option>
+        <option value="banana" selected>Banana</option>
+        <option value="orange">Orange</option>
+        <option value="strawberry">Strawberry</option>
+        <option value="grape">Grape</option>
+      </select>
+
+      <p>
+        3: Grouped Options Create a dropdown menu with grouped options. Group
+        the options into "Citrus Fruits" and "Berries". Hint: - optgroup
+      </p>
+      <select class="selection">
+        <optgroup label="Citrus Fruits">
+          <option value="orange">Orange</option>
+        </optgroup>
+        <optgroup label="Berries">
+          <option value="strawberry">Strawberry</option>
+          <option value="grape">Grape</option>
+        </optgroup>
+      </select>
+
+      <p>
+        4: Disabled Options Create a dropdown menu with some options disabled.
+        Hint: - disabled
+      </p>
+      <select class="selection">
+        <option value="apple">Apple</option>
+        <option value="banana" disabled>Banana (disabled)</option>
+        <option value="orange">Orange</option>
+        <option value="strawberry">Strawberry</option>
+        <option value="grape" disabled>Grape (disabled)</option>
+      </select>
+
+      <p>
+        5: Multiple Selection Create a dropdown menu that allows multiple
+        selections. Hint: - multiple
+      </p>
+      <select multiple class="selection">
+        <option value="apple">Apple</option>
+        <option value="banana">Banana</option>
+        <option value="orange">Orange</option>
+        <option value="strawberry">Strawberry</option>
+        <option value="grape">Grape</option>
+      </select>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .img1{
+            border: 1px solid;
+          border-radius: 20px;
+        }
+
+        .img2{
+            margin: 10px;
+            
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <img src="./images/th.jfif" class="img1" alt="first image" height="200" width="400">
+    <img src="./images/2.jfif"  class="img2" alt="second image">
+    <img src="./images/3.jfif" alt="third image">
+
+    <!-- all assignment combined into one  -->
+     <br>
+     <p>Responsive image</p>
+     <picture>
+        <source srcset="./images/th.jfif" media="(min-width:800px)"/>
+        <source srcset="./images/2.jfif" media="(min-width:400px)"/>
+        <img src="./images3.jfif" alt="third picture" style="width:auto"/>
+     </picture>
+</body>
+</html>

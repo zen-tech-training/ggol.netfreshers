@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <script>
+        function validateForm() {
+            var feedback = document.getElementById('feedback');
+            var email = document.getElementById('email');
+            var submitTime = document.getElementById('submit-time');
+            
+            // Check if feedback meets minlength and maxlength requirements
+            if (!feedback.checkValidity()) {
+                alert(feedback.validationMessage);
+                return false;
+            }
+            
+            // Since email is readonly, we do not need to validate it
+            // Since submitTime is disabled, we do not need to validate it
+            
+            // If all validations pass
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h1>Feedback Form</h1>
+    <form onsubmit="return validateForm()">
+        <label for="id">ID:</label>
+        <input type="text" id="id" name="id" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="example@example.com" readonly><br><br>
+
+        <label for="feedback">Feedback:</label>
+        <textarea id="feedback" name="feedback" minlength="10" maxlength="200" required></textarea><br><br>
+
+        <label for="submit-time">Submit Time:</label>
+        <input type="text" id="submit-time" name="submit-time" value="12:00 PM" disabled><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

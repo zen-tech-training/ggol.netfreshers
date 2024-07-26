@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Composition Over Inheritance
+        User with Address:
+    - Create a constructor function `User` with properties `username` and `password`.
+    - Create a constructor function `Address` with properties `street`, `city`, and `country`.
+    - Add an `address` property to the `User` constructor that holds an `Address` instance.
+    - Add a method `getAddress` to the `User` prototype that returns the user's address as a formatted string.
+        */
+
+        function User(username,password,Address){
+            this.username = username;
+            this.password = password;
+            this.Address = Address;
+
+        }
+
+        function Address(street,city,country){
+            this.street = street;
+            this.city = city;
+            this.country=country;        
+        }
+        
+        User.prototype.getAddress = function(){
+            console.log(this.Address.street+" "+this.Address.city+" "+this.Address.country);
+        }
+        //mybad--declared user first and then address...but address is required by user so define it first
+        var address = new Address('kalewadi','pune','india');
+        var user = new User('vaidehi','123',address);
+        
+        user.getAddress();
+
+    </script>
+</body>
+</html>

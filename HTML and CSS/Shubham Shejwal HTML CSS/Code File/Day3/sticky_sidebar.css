@@ -1,0 +1,70 @@
+/* sticky_sidebar.css */
+
+/* Reset some default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling for the header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Container for sidebar and main content */
+.container {
+    display: flex;
+    max-width: 1200px; /* Adjust as needed */
+    margin: 20px auto;
+}
+
+/* Styling for the sidebar */
+.sidebar {
+    width: 200px; /* Fixed width for the sidebar */
+    position: sticky; /* Sticky positioning */
+    top: 20px; /* Distance from the top */
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Styling for the main content */
+main {
+    flex: 1;
+    padding-left: 20px; /* Space between sidebar and main content */
+}
+
+main section {
+    margin-bottom: 40px; /* Space between sections */
+}
+
+main section h2 {
+    margin-bottom: 10px;
+}
+
+main section p {
+    line-height: 1.6;
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //object literal definition
+        //the other way is to use new keyword
+        var car ={
+            make: 'Mercedez-Benz',
+            model: 'MB-222',
+            year: 2003,
+            //general way to define methods of objects, just mention 'this'.propertyName
+            getCarInfo: function(){
+                return (this.make+' is of model no '+this.model+' manufactured in year '+this.year);
+            } 
+        }
+        console.log(car.getCarInfo());
+    </script>
+</body>
+</html>

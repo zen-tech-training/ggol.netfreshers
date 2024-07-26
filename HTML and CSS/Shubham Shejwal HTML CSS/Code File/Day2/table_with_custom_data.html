@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table with Custom Data Attributes</title>
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Age</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr data-id="1" data-name="John Doe" data-age="30">
+          <td>1</td>
+          <td>John Doe</td>
+          <td>30</td>
+        </tr>
+        <tr data-id="2" data-name="Jane Smith" data-age="25">
+          <td>2</td>
+          <td>Jane Smith</td>
+          <td>25</td>
+        </tr>
+        <tr data-id="3" data-name="Michael Johnson" data-age="35">
+          <td>3</td>
+          <td>Michael Johnson</td>
+          <td>35</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

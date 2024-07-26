@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="add">Add item</button>
+
+    <script>
+        var ul = document.createElement('ul');
+        document.body.appendChild(ul);
+
+        var cnt = 0;
+
+        document.getElementById('add').onclick = ()=>{
+            cnt+=1;
+            var item = document.createElement('li');
+            item.innerText = `Item ${cnt}`;
+            ul.appendChild(item);
+        }
+
+    </script>
+    
+</body>
+</html>

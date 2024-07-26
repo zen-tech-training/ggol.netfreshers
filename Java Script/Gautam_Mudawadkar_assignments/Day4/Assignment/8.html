@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Event Listener</title>
+
+</head>
+
+<body>
+
+<div id="hoverDiv" style="width:100px; height:100px; background-color: lightgreen;"></div>
+
+<p id="hoverText">Hover over the box to change this text.</p>
+
+<script>
+  var box=document.getElementById("hoverDiv");
+  box.addEventListener("mouseover",()=>{
+      document.getElementById("hoverText").innerText="Text Changed on Hovering the box"
+  })
+
+  box.addEventListener("mouseout",()=>{
+    document.getElementById("hoverText").innerText="Hover over the box to change this text."
+  })
+
+  
+</script>
+
+</body>
+
+</html>

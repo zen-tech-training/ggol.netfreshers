@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Shapes:
+    - Create a base constructor function `Shape` with a method `getArea` that returns 0.
+    - Create derived constructor functions `Circle` and `Rectangle` that override the `getArea` method to calculate the area of the shape.*/
+        function Shape(){
+            this.getArea = function(){
+                return 0;
+            }
+
+        }
+
+        function Circle(radius){
+            this.radius=radius;
+        }
+
+        Circle.prototype = new Shape();
+        Circle.prototype.constructor = Circle;
+
+        Circle.prototype.getArea = function(){
+            return Math.Pi*this.radius**2;
+        };
+    </script>
+</body>
+</html>

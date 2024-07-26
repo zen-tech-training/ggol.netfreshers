@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const response=[
+            {
+                id:1,
+                name:'John',
+                age: 41,
+            },
+            {
+                id:2,
+                name:'Zack',
+                age: 35,
+            },
+            {
+                id:3,
+                name:'Peter',
+                age: 47,
+            },
+
+        ]
+
+        response.sort((a,b)=>a.age-b.age);
+        console.log(response);
+
+    </script>
+</body>
+</html>

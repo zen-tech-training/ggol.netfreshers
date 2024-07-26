@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Handling JSON Response</title>
+  </head>
+
+  <body>
+    <p>
+      Assignment 2: Handling JSON Response Write a JavaScript function to make a
+      GET request to a public API, parse the JSON response, and display specific
+      data in HTML elements. // https://jsonplaceholder.typicode.com/posts/1
+    </p>
+    <button onclick="fetchJsonData()">Fetch JSON Data</button>
+
+    <p id="title"></p>
+    <p id="body"></p>
+
+    <script>
+      function fetchJsonData() {
+        fetch("https://jsonplaceholder.typicode.com/posts/1")
+          .then((response) => response.json())
+          .then((data) => {
+            document.getElementById("title").textContent = data.title;
+            document.getElementById("body").textContent = data.body;
+          })
+          .catch((error) => {
+            document.getElementById("title").textContent =
+              "Error fetching data";
+            document.getElementById("body").textContent = "";
+          });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Animal and Dog Classes:
+    - Create a constructor function `Animal` with properties `name` and `sound`.
+    - Add a method `makeSound` to the `Animal` prototype that logs the sound.
+    - Create a constructor function `Dog` that inherits from `Animal`.
+    - Add a method `fetch` to the `Dog` prototype.*/
+        function Animal(name,sound){
+            this.name=name;
+            this.sound=sound;
+        }
+        Animal.prototype.makeSound = function(){
+            console.log(this.sound);
+        }
+        Dog.prototype = new Animal('Dog','Bark');
+        Dog.prototype.constructor = Dog;
+
+        function Dog(){};
+        Dog.prototype.fetch = function(){
+            console.log(this.name);
+        }
+        var dog = new Dog();
+        dog.fetch();
+        dog.makeSound();
+
+        //advantages: shares memory for methods
+        //disadvantages: shared memory access to all methods as well as variables, can't pass values to child 
+
+    </script>
+</body>
+</html>

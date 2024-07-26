@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> <!-- Your CSS file -->
+    <title>Slide-In Menu</title>
+    <style>
+      
+      .menu-container {
+    overflow: hidden; /* Hide overflowing content */
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 0; /* Initially hidden */
+    transition: width 0.3s ease; /* Smooth transition */
+}
+
+.menu:hover {
+    width: 200px; /* Slide in when hovered */
+}
+
+.menu li {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <div class="menu">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+        </div>
+    </div>
+</body>
+</html>

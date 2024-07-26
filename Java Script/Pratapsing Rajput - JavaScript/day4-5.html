@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Form Validation</title>
+  </head>
+
+  <body>
+    <h1>
+      Assignment 5: Form Validation Write a JavaScript function to validate a
+      form. The form should contain an input field for an email address. The
+      function should check if the input is a valid email address and display an
+      appropriate message.
+    </h1>
+    <form id="myForm" onsubmit="return validateForm()">
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <p id="message"></p>
+
+    <script>
+      function validateForm() {
+        const emailInput = document.getElementById("email"); // Get the email input element
+        const email = emailInput.value.trim(); // Get the entered email address
+
+        // Regular expression for email validation
+        const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+        if (email === "") {
+          showMessage("Please enter an email address.");
+          return false; // Prevent form submission
+        } else if (!emailRegex.test(email)) {
+          showMessage("Invalid email address. Please enter a valid email.");
+          return false; // Prevent form submission
+        } else {
+          showMessage("Email address is valid.");
+          return true; // Allow form submission
+        }
+      }
+
+      function showMessage(message) {
+        const messageElement = document.getElementById("message");
+        messageElement.textContent = message;
+      }
+    </script>
+  </body>
+</html>

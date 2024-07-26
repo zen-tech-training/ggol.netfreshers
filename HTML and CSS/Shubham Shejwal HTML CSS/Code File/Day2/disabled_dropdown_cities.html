@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dropdown with Disabled Options</title>
+  </head>
+  <body>
+    <label for="disabled-dropdown">Select a City:</label>
+    <input list="disabled-cities" id="disabled-dropdown" />
+
+    <datalist id="disabled-cities">
+      <option value="Delhi"></option>
+      <option value="Mumbai" disabled></option>
+      <option value="Kolkata"></option>
+      <option value="Chennai" disabled></option>
+      <option value="Bangalore"></option>
+    </datalist>
+  </body>
+</html>

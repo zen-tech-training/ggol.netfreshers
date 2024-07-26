@@ -1,0 +1,64 @@
+<!--1. Extend the HTML file from Assignment 1.
+2. Create a `<style>` section within the `<head>` of your HTML file.
+3. Use CSS to style the table (`<table>`), table headers (`<th>`), and table data (`<td>`).
+   - Set table width, cell padding, and cell borders.
+   - Apply background colors, font styles, and alignment to headers and data cells.
+4. Add alternating row colors (`nth-child` selector) to improve readability.
+5. Save and view the styled table in a browser to observe the effects of your CSS styling.  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formatted table</title>
+    <style>
+        table,th,td{
+            font-family: cursive;
+            border-spacing: 22px;
+            padding: 20px;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th:nth-child(odd ){
+            background-color: floralwhite;
+        }
+        th:nth-child(even ){
+            background-color:lavenderblush;
+        }
+        td:nth-child(odd ){
+            background-color: floralwhite;
+        }
+        td:nth-child(even ){
+            background-color:lavenderblush;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Age</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Vaidehi</td>
+                <td>abc@gmail.com</td>
+                <td>23</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td>Shruti</td>
+                <td>pqr@gmail.com</td>
+                <td>21</td>
+            </tr>
+        </tbody><tbody>
+            <tr>
+                <td>Sakshi</td>
+                <td>ijk@gmail.com</td>
+                <td>22</td>
+            </tr>
+        </tbody>
+</body>
+</html>

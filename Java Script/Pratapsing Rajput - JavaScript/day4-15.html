@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Clone and Modify Element</title>
+  </head>
+  <body>
+    <button onclick="cloneAndModify()">Clone and Modify</button>
+
+    <p id="originalParagraph">Original Text</p>
+
+    <script>
+      function cloneAndModify() {
+        const originalParagraph = document.getElementById("originalParagraph");
+        const clonedParagraph = originalParagraph.cloneNode(true);
+        clonedParagraph.textContent = "Modified Text";
+        document.body.appendChild(clonedParagraph);
+      }
+    </script>
+  </body>
+</html>

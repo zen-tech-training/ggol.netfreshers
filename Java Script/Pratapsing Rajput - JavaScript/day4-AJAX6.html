@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CRUD Requests</title>
+  </head>
+  <body>
+    <button onclick="getPosts()">Get Posts</button>
+    <button onclick="createPost()">Create Post</button>
+    <button onclick="deletePost()">Delete Post</button>
+    <button onclick="updatePost()">Update Post</button>
+    <!-- Add other UI elements as needed -->
+    <script>
+      function getPosts() {
+        // Make a GET request to fetch posts
+        // Handle the response (display or log)
+        fetch("https://jsonplaceholder.typicode.com/posts")
+          .then((response) => response.json())
+          .then((data) => {
+            console.log("Posts:", data);
+          })
+          .catch((error) => {
+            console.error("Error fetching posts:", error);
+          });
+      }
+
+      function createPost() {
+        // Make a POST request to create a new post
+        // Handle the response (display or log)
+        const postData = {
+          title: "New Post",
+          body: "This is a new post content",
+          userId: 1,
+        };
+
+        fetch("https://jsonplaceholder.typicode.com/posts", {
+          method: "POST",
+          body: JSON.stringify(postData),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            console.log("New Post:", data);
+          })
+          .catch((error) => {
+            console.error("Error creating post:", error);
+          });
+      }
+
+      function deletePost() {
+        // Make a DELETE request to delete a post
+        // Handle the response (display or log)
+        const postIdToDelete = 1; // Replace with the actual post ID
+        fetch(`https://jsonplaceholder.typicode.com/posts/${postIdToDelete}`, {
+          method: "DELETE",
+        })
+          .then((response) => {
+            if (response.status === 200) {
+              console.log(`Post ${postIdToDelete} deleted successfully`);
+            } else {
+              console.error(`Error deleting post ${postIdToDelete}`);
+            }
+          })
+          .catch((error) => {
+            console.error("Error deleting post:", error);
+          });
+      }
+
+      function updatePost() {
+        // Make a PUT request to update a post
+        // Handle the response (display or log)
+        const postIdToUpdate = 1; // Replace with the actual post ID
+        const updatedData = {
+          title: "Updated Post Title",
+          body: "Updated post content",
+        };
+
+        fetch(`https://jsonplaceholder.typicode.com/posts/${postIdToUpdate}`, {
+          method: "PUT",
+          body: JSON.stringify(updatedData),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            console.log("Updated Post:", data);
+          })
+          .catch((error) => {
+            console.error("Error updating post:", error);
+          });
+      }
+    </script>
+  </body>
+</html>

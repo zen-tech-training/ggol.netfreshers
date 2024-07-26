@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Registration Form</title>
+  </head>
+  <body>
+    <h2>User Registration Form</h2>
+    <form action="#" method="post" onsubmit="return validateForm()">
+      <label for="fullname">Full Name:</label><br />
+      <input type="text" id="fullname" name="fullname" required /><br /><br />
+
+      <label for="email">Email:</label><br />
+      <input type="email" id="email" name="email" required /><br /><br />
+
+      <label for="password">Password:</label><br />
+      <input
+        type="password"
+        id="password"
+        name="password"
+        required
+        minlength="8"
+      /><br /><br />
+
+      <label for="confirmpassword">Confirm Password:</label><br />
+      <input
+        type="password"
+        id="confirmpassword"
+        name="confirmpassword"
+        required
+        minlength="8"
+        oninput="checkPasswordMatch()"
+      /><br />
+      <span id="passwordMatch"></span><br />
+
+      <label for="phone">Phone Number:</label><br />
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        required
+        pattern="[0-9]{10}"
+      /><br /><br />
+
+      <label for="dob">Date of Birth:</label><br />
+      <input type="date" id="dob" name="dob" required /><br /><br />
+
+      <label for="website">Website:</label><br />
+      <input type="url" id="website" name="website" /><br /><br />
+
+      <label for="age">Age:</label><br />
+      <input
+        type="number"
+        id="age"
+        name="age"
+        required
+        min="18"
+        max="100"
+      /><br /><br />
+
+      <input type="submit" value="Submit" />
+    </form>
+
+    <script>
+      function validateForm() {
+        // JavaScript validation can be added here if needed
+        return true; // Return true to submit the form
+      }
+
+      function checkPasswordMatch() {
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirmpassword").value;
+
+        if (password !== confirmPassword) {
+          document.getElementById("passwordMatch").innerHTML =
+            "Passwords do not match!";
+        } else {
+          document.getElementById("passwordMatch").innerHTML = "";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="formid" onclick="return validateForm()">
+        <lable for="Email">Enter the Email</lable>
+        <input type="text" id="email" name="userEmail">
+        <input type="submit" value="Submit">
+    </form>
+    <p id="message"></p>
+    <script>
+        function validateForm(){
+            var ele=document.getElementById('email').value;
+            var p1=document.getElementById('message');
+            var emailPattern=/^[a-zA-Z0-9_\-\.]+@[a-zA-Z0-9_\-\.]+\.[a-zA-Z]{2,5}$/;
+            // p1.emailPattern="";
+            if(emailPattern.test(ele)){
+                p1.innerText="yes you have entered mail correctly";
+                return true;
+            }else{
+                
+                p1.innerText=" ";
+                return false;
+            }
+
+        }
+    </script>
+</body>
+</html>

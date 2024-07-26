@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Vehicle(make,model,year){
+            this.make=make;
+            this.model=model;
+            this.year=year;
+
+        }
+        Vehicle.prototype.getDetails=function(){
+            return this.make+" "+this.model+" "+this.year;
+        }
+
+        Car.prototype=new Vehicle("BMW","New","2020");
+        Car.prototype.constructor=Car;
+
+        function Car(doors,make,model,year){
+            Vehicle.call(this,make,model,year);
+            this.doors=doors;
+        }
+
+        Car.prototype.getDetails=function(){
+            return this.doors+" "+this.make+" "+this.model+" "+this.year;
+        }
+        var v1=new Vehicle("alto","new","2023");
+        console.log(v1.getDetails());
+        
+        var c1=new Car(4,"nano","old","2021");
+        console.log(c1.getDetails());
+        
+    </script>
+</body>
+</html>

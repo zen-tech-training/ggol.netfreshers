@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Create a Table</title>
+  </head>
+  <body>
+    <table border="1">
+      <tbody id="myTableBody"></tbody>
+    </table>
+
+    <script>
+      const tableBody = document.getElementById("myTableBody");
+      let num = 1;
+
+      for (let i = 0; i < 3; i++) {
+        const row = document.createElement("tr");
+        for (let j = 0; j < 3; j++) {
+          const cell = document.createElement("td");
+          cell.textContent = num;
+          row.appendChild(cell);
+          num++;
+        }
+        tableBody.appendChild(row);
+      }
+    </script>
+  </body>
+</html>

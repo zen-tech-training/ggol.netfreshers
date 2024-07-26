@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Create a List</title>
+  </head>
+  <body>
+    <ul id="myList"></ul>
+    <button onclick="addItem()">Add Item</button>
+
+    <script>
+      let itemCount = 1;
+
+      function addItem() {
+        const listItem = document.createElement("li");
+        listItem.textContent = `Item ${itemCount}`;
+        document.getElementById("myList").appendChild(listItem);
+        itemCount++;
+      }
+    </script>
+  </body>
+</html>

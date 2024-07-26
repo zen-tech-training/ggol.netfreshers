@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        1. Create Pseudo classical Inheritance by using Object.create and Object.setPrototypeOf for
+            Human – Base / Super Class
+                name – string
+            Prototype Level Method 
+                Speak	
+                Introduction
+
+            Student
+                College – string
+                Courses – string []
+            Prototype Level Method
+                Introduction (overridden)
+                takeExams
+        */
+       
+        function Human(name){
+            this.name = name;
+        }
+        Human.prototype.speak = function(){
+            console.log('speak');
+        }
+        Human.prototype.Introduction = function(){
+            console.log('Hello I am '+this.name);
+        }
+
+       
+        function Student(name,college,courses){
+            Human.call(this,name);
+            this.college = college;
+            this.courses = courses;
+
+        }
+
+        Student.prototype = Object.create(Human.prototype);
+        Object.setPrototypeOf(Student,Human);
+
+        Student.prototype.Introduction = function(){
+            console.log('I am '+this.name+' studying in '+this.college+' studying '+this.courses);
+        }
+        Student.prototype.takeExams = function(){
+            console.log('I am '+this.name+' and I take exams');
+        }
+
+        var human = new Human('vaidehi');
+        var student = new Student('vaidehi','pccoer',['java','cpp']);
+
+        student.Introduction();
+        human.Introduction();
+       student.speak(); //why is it not accessible if we comment out any one of line on 44 45
+
+        
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Book(title,author,year){
+            this.title=title;
+            this.author=author;
+            this.year=year;
+
+            this.getSummary=function(){
+                return this.title+" "+this.author+" "+this.year;
+            }
+            this.SetYear=function(newYear){
+                this.year=newYear;
+                console.log("Year has been updated");
+            }
+        }
+
+        var b1=new Book("success","xyz","2020");
+        console.log(b1.getSummary());
+        b1.SetYear("2030");
+        console.log(b1.getSummary());
+    </script>
+</body>
+</html>

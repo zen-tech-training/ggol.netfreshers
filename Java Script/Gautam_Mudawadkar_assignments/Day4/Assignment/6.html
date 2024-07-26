@@ -1,0 +1,44 @@
+<html>
+
+<head>
+
+<title>Toggle Visibility</title>
+
+<style>
+
+
+#toggleDiv {
+
+width: 100px;
+
+height: 100px;
+
+background-color: lightblue;
+
+}
+.toggleClass{
+    display: none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="toggleDiv"></div>
+
+<button onclick="toggleVisibility()">Toggle Visibility</button>
+
+<script>
+    function toggleVisibility()
+    {
+       
+        var x=document.getElementById("toggleDiv");
+        x.classList.toggle("toggleClass")
+    }
+</script>
+
+</body>
+
+</html>

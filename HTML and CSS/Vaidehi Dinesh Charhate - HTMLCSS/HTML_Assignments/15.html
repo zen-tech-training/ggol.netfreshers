@@ -1,0 +1,51 @@
+<!-- 1: Create a Table with Custom Data Attributes
+Create a table where each row has custom data attributes for `id`, `name`, and `age`. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Attributes</title>
+    <style>
+        table,tr,td{
+            border: black 2px solid;
+            font-size: large;
+        }
+    </style>
+</head>
+<script>
+    function showDetails(randomText) {
+      let randomType = randomText.getAttribute("data-name");
+      alert("The " + randomText.innerHTML + " is a " + randomType + ".");
+    }
+</script>
+<body>
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>id</th>
+            <th>age</th>
+        </thead>
+        <tbody>
+            
+            <tr>
+                <td onclick="showDetails(this)" data-name="fgbb">fgbb</td>
+                <td>23</td>
+                <td>22</td>
+
+            </tr>
+            <tr>
+                <td onclick="showDetails(this)" data-name="ddsadsa">ddsadsa</td>
+                <td>98</td>
+                <td>12</td>
+
+            </tr><tr>
+                <td onclick="showDetails(this)" data-name="dds">dds</td>
+                <td>55</td>
+                <td>33</td>
+
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,59 @@
+/* slide_in_menu.css */
+
+/* Reset some default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container for the menu */
+.menu-container {
+    position: relative; /* Ensure positioning context */
+    width: 200px; /* Adjust container width as needed */
+    margin: 50px; /* Margin for positioning */
+}
+
+/* Styling for the menu toggle button */
+.menu-toggle {
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    padding: 10px 20px; /* Button padding */
+    border: none; /* Remove button border */
+    cursor: pointer; /* Cursor style */
+}
+
+/* Styling for the menu */
+.menu {
+    position: absolute; /* Position menu absolutely */
+    top: 0;
+    left: -200px; /* Initially hide menu off-screen */
+    width: 200px; /* Width of the menu */
+    padding: 10px; /* Padding for menu items */
+    background-color: #f0f0f0; /* Menu background color */
+    list-style-type: none; /* Remove default list styling */
+    transition: transform 0.3s ease; /* Smooth transition for sliding effect */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional: Add shadow to menu */
+}
+
+/* Slide-in effect on hover */
+.menu-container:hover .menu {
+    transform: translateX(200px); /* Slide menu in from left */
+}
+
+/* Styling for menu items */
+.menu li {
+    margin-bottom: 10px; /* Spacing between menu items */
+}
+
+.menu li a {
+    text-decoration: none; /* Remove underline from links */
+    color: #333; /* Link text color */
+    display: block; /* Make links block-level for padding */
+    padding: 5px; /* Padding for links */
+}
+
+.menu li a:hover {
+    background-color: #007bff; /* Background color on hover */
+    color: #fff; /* Text color on hover */
+}

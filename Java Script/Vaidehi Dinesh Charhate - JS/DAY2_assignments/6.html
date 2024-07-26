@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Math Utilities:
+    - Create a constructor function `MathUtil`.
+    - Add a static method `add` that takes two numbers and returns their sum.
+    - Add a static method `subtract` that takes two numbers and returns their difference.
+    - Add a static method `multiply` that takes two numbers and returns their product.
+    - Add a static method `divide` that takes two numbers and returns their quotient.
+        */
+
+        function MathUtil(){}
+            MathUtil.add = function(a,b){
+                return a+b;
+            }
+            MathUtil.sub = function(a,b){
+                return (a-b);
+            }
+            MathUtil.mult = function(a,b){
+                return (a*b);
+            }
+            MathUtil.div = function(a,b){
+                return (a/b);
+            }
+        
+        document.write(MathUtil.add(2,3));
+        console.log(MathUtil.sub(2,3));
+        console.log(MathUtil.mult(2,3));
+        console.log(MathUtil.div(2,3));
+
+    </script>
+</body>
+</html>

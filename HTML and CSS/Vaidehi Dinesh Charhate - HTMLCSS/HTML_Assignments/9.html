@@ -1,0 +1,69 @@
+<!-- Create an image gallery using HTML5 and CSS.
+
+ Task: 
+1. Modify the HTML file from Assignment 3.
+2. Create a grid layout using `<div>` containers to display multiple images.
+3. Embed at least 6 images within the grid using `<img>` tags.
+4. Apply CSS to style the grid layout, such as defining column widths, spacing between images, and borders around each image container.
+5. Implement hover effects using CSS (e.g., changing opacity or adding a border) to enhance user interaction with images.
+6. Ensure each image has appropriate alternative text (`alt` attribute) for accessibility purposes.
+7. Validate the HTML and CSS code for correctness and consistency.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid images</title>
+</head>
+<style>
+    body:hover{
+        background-color:bisque ;
+    }
+    .div-container{
+        column-width: 3em;
+        display: inline-flex;
+        
+        
+    }
+    .img-item{
+        padding: 5px;
+        margin: 3px;
+    }
+    .img-item:hover{
+        background-color: black;
+    }
+</style>
+<body>
+    <div class="div-container">
+        <img class="img-item" src="./img1.jfif" alt="img1">
+        <img class="img-item" src="./img2.jfif" alt="img2">
+        <img class="img-item" src="./img3.jfif" alt="img3">
+        <img class="img-item" src="./img4.jfif" alt="img4">
+        <img class="img-item" src="./img5.jfif" alt="img5">
+        <img class="img-item" src="./img6.jfif" alt="img6">
+        <!-- <img src="./img7.jfif" alt="img7"> -->
+
+    </div>
+    <div class="div-container">
+        <img class="img-item" src="./img5.jfif" alt="img5">
+        <img class="img-item" src="./img2.jfif" alt="img2">
+        <img class="img-item" src="./img1.jfif" alt="img1">
+        <img class="img-item" src="./img4.jfif" alt="img4">
+        <img class="img-item" src="./img3.jfif" alt="img3">
+        <img class="img-item" src="./img6.jfif" alt="img6">
+        <!-- <img src="./img7.jfif" alt="img7"> -->
+
+    </div>
+    <div class="div-container">
+        <img class="img-item" src="./img6.jfif" alt="img6">
+        <img class="img-item" src="./img4.jfif" alt="img4">
+        <img class="img-item" src="./img3.jfif" alt="img3">
+        <img class="img-item" src="./img1.jfif" alt="img1">
+        <img class="img-item" src="./img5.jfif" alt="img5">
+        <img class="img-item" src="./img2.jfif" alt="img2">
+        <!-- <img src="./img7.jfif" alt="img7"> -->
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+/* centered_box.css */
+
+/* Reset some default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling for the container */
+.container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Full viewport height */
+    background-color: #f0f0f0; /* Light gray background */
+}
+
+/* Styling for the centered box */
+.centered-box {
+    width: 300px; /* Adjust width as needed */
+    padding: 20px;
+    background-color: #444;
+    border: 1px solid #ccc;
+    border-radius: 10%;
+    text-align: center;
+
+    /* Center the box absolutely */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.centered-box h2 {
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: white;
+}

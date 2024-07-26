@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Zoom Effect</title>
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .image-container {
+      position: relative;
+      width: 300px;
+    }
+
+    .zoom-image {
+      width: 100%;
+      display: block;
+      transition: transform 0.3s ease-out;
+    }
+
+    .zoom-image:hover {
+      transform: scale(1.1);
+    }
+  </style>
+  <body>
+    <div class="image-container">
+      <img
+        src="https://images.pexels.com/photos/11921988/pexels-photo-11921988.jpeg?auto=compress&cs=tinysrgb&w=400"
+        alt="Image"
+        class="zoom-image"
+      />
+    </div>
+  </body>
+</html>

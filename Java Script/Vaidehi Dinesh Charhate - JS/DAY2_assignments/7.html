@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Using Getters and Setters
+Book:
+    - Create a constructor function `Book` with properties `title`, `author`, and `year`.
+    - Add a getter method `getSummary` that returns a summary string of the book.
+    - Add a setter method `setYear` that updates the year and logs a message when the year is set.*/
+
+        function Book(title,author ,year){
+            // var title = title;
+            // var author = author;
+            // var year = year;
+
+            this.getSummary=function(){
+                console.log("title: "+title+" author: "+author+" year: "+year);
+            }
+            this.setYear=function(year){
+                this.year = year;
+            }
+        }
+
+        var book = new Book('abc','pqr',2002);
+        book.getSummary();
+        book.setYear(2003);
+
+    </script>
+</body>
+</html>

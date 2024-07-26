@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact List with Custom Data Attributes</title>
+    <style>
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      li {
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+      }
+      .contact-info {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Contact List with Custom Data Attributes</h2>
+
+    <ul>
+      <li data-id="1" data-phone="123-456-7890" data-email="pratap@example.com">
+        Pratap
+        <div class="contact-info">
+          Phone: 123-456-7890<br />
+          Email: pratap@example.com
+        </div>
+      </li>
+      <li data-id="2" data-phone="987-654-3210" data-email="ishan@example.com">
+        Ishan
+        <div class="contact-info">
+          Phone: 987-654-3210<br />
+          Email: ishan@example.com
+        </div>
+      </li>
+      <li
+        data-id="3"
+        data-phone="555-123-4567"
+        data-email="uttkarsh@example.com"
+      >
+        Uttkarsh
+        <div class="contact-info">
+          Phone: 555-123-4567<br />
+          Email: uttkarsh@example.com
+        </div>
+      </li>
+    </ul>
+  </body>
+</html>

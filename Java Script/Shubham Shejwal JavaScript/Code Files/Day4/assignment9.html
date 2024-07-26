@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Create Modal</title>
+    <style>
+      #myModal {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 200px;
+        padding: 20px;
+        background-color: white;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="openModal()">Open Modal</button>
+
+    <div id="myModal">
+      <p>This is a modal.</p>
+      <button onclick="closeModal()">Close</button>
+    </div>
+
+    <script src="assignment9.js"></script>
+  </body>
+</html>

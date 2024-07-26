@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>POST Request</title>
+  </head>
+
+  <body>
+    <p>
+      Assignment 4: POST Request Write a JavaScript function to make a POST
+      request to a public API and display the response.
+      //https://jsonplaceholder.typicode.com/posts
+    </p>
+    <button onclick="makePostRequest()">Send Data</button>
+
+    <p id="postResponse"></p>
+
+    <script>
+      function makePostRequest() {
+        const postData = {
+          title: "New Post",
+          body: "This is a new post content",
+          userId: 1,
+        };
+
+        fetch("https://jsonplaceholder.typicode.com/posts", {
+          method: "POST",
+          body: JSON.stringify(postData),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            document.getElementById("postResponse").textContent =
+              JSON.stringify(data);
+          })
+          .catch((error) => {
+            document.getElementById("postResponse").textContent =
+              "Error creating post";
+          });
+      }
+    </script>
+  </body>
+</html>

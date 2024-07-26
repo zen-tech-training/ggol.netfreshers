@@ -1,0 +1,55 @@
+<!--Modify the `fetchAllData` function from Assignment 4.
+2. Instead of awaiting each function one after another, use `Promise.all` to execute `fetchPosts` and `fetchComments` in parallel.
+3. Log the combined data to the console once both promises are resolved.
+4. Call `fetchAllData` and observe the output.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function fetchPosts(){
+            var response = await fetch('https://jsonplaceholder.typicode.com/posts')
+            .then((response)=>response.json())
+            .then((responseJson) => {
+            console.log(responseJson);
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+           
+
+        }
+        async function fetchComments(){
+            var response = await fetch('https://jsonplaceholder.typicode.com/comments?postId=1')
+            .then((response)=>response.json())
+            .then((responseJson) => {
+            console.log(responseJson);
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+
+
+        }
+        async function fetchAllData(){
+            Promise.all([fetchPosts,fetchComments])
+            .then((response)=>{
+                console.log(response);
+            })
+            .catch((err)=>{
+                console.log(err);
+            })
+        }
+        fetchAllData();
+
+        
+
+    </script>
+</body>
+</html>

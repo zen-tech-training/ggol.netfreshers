@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* - Create a constructor function `Vehicle` with properties `make`, `model`, and `year`.
+    - Add a method `getDetails` to the `Vehicle` prototype that returns a string with the vehicle's details.
+    - Create a constructor function `Car` that inherits from `Vehicle` and adds a property `doors`.
+    - Override the `getDetails` method in the `Car` prototype to include the number of doors.
+        */
+       function Vehicle(make,model,year){
+            this.make=make;
+            this.model=model;
+            this.year=year;
+
+
+       }
+       Vehicle.prototype.getDetails = function(){
+            console.log("make: "+this.make+" model: "+this.model+" year: "+this.year);
+       }
+
+       Car.prototype = new Vehicle('abc','xyz',2003,4);
+       Car.prototype.constructor = Car;
+
+       function Car(doors){
+            this.doors=doors;
+        }
+
+        Car.prototype.getDetails = function(){
+            console.log("make: "+this.make+" model: "+this.model+" year: "+this.year+" doors: "+this.doors);
+        }
+
+        var car = new Car(4);
+        var vehicle = new Vehicle('p','q',2004);
+        car.getDetails();
+        vehicle.getDetails();
+        
+    </script>
+</body>
+</html>

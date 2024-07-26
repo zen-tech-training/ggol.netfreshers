@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function shape() {
+        
+        }
+        shape.prototype.getArea=function(){
+            return 0;
+        }
+
+        Circle.prototype = new shape();
+        Circle.prototype.constructor = Circle;
+
+        Rectangle.prototype = new shape();
+        Rectangle.prototype.constructor = Rectangle;
+
+        function Circle() {
+
+        }
+        Circle.prototype.getArea = function () {
+            console.log("This is circle shape");
+        }
+
+
+        function Rectangle() {
+
+        }
+
+        Rectangle.prototype.getArea = function () {
+            console.log("This is Rectangle Shape");
+        }
+        var s1=new shape();
+        console.log(s1.getArea());
+        var c1=new Circle();
+        var r1=new Rectangle();
+        c1.getArea();
+        r1.getArea();
+    </script>
+</body>
+
+</html>

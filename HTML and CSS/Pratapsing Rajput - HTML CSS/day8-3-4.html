@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slide-In Menu Effect</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu-container {
+      position: relative;
+      width: 100%;
+    }
+
+    .toggle-menu {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    .slide-menu {
+      position: absolute;
+      top: 0;
+      left: -200px;
+      width: 200px;
+      background-color: #f0f0f0;
+      transition: left 0.3s ease-out;
+      padding: 20px;
+    }
+
+    .slide-menu ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .slide-menu ul li {
+      margin-bottom: 10px;
+    }
+
+    .slide-menu ul li a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .slide-menu ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .menu-container:hover .slide-menu {
+      left: 0;
+    }
+  </style>
+  <body>
+    <div class="menu-container">
+      <button class="toggle-menu">Toggle Menu</button>
+      <nav class="slide-menu">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Services</a></li>
+        </ul>
+      </nav>
+    </div>
+  </body>
+</html>

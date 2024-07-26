@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dropdown with Grouped Options</title>
+  </head>
+  <body>
+    <label for="grouped-dropdown">Select a City:</label>
+    <input list="grouped-cities" id="grouped-dropdown" />
+
+    <datalist id="grouped-cities">
+      <optgroup label="Delhi">
+        <option value="New Delhi"></option>
+        <option value="Noida"></option>
+        <option value="Gurgaon"></option>
+      </optgroup>
+
+      <optgroup label="Maharashtra">
+        <option value="Mumbai"></option>
+        <option value="Pune"></option>
+        <option value="Nagpur"></option>
+      </optgroup>
+
+      <optgroup label="Tamil Nadu">
+        <option value="Chennai"></option>
+        <option value="Coimbatore"></option>
+        <option value="Madurai"></option>
+      </optgroup>
+    </datalist>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animations and Media Queries</title>
+    <style>
+      .slide-in-text {
+        font-size: 24px;
+        position: absolute;
+        left: -200px;
+        animation: slideInAnimation 2s forwards;
+      }
+
+      @keyframes slideInAnimation {
+        from {
+          left: -200px;
+        }
+        to {
+          left: 50px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="slide-in-text">Slide-In Heading</h1>
+  </body>
+</html>

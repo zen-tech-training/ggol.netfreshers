@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Update Image Source</title>
+
+</head>
+
+<body>
+
+<img id="myImage" src="image1.jpg" alt="Image">
+
+<button onclick="changeImage()">Change Image</button>
+
+<script>
+    function changeImage()
+    {
+        document.getElementById("myImage").attributes[1].value="/image2.jpg";
+        
+    }
+</script>
+
+</body>
+
+</html>

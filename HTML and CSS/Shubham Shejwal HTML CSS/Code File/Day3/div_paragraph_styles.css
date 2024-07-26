@@ -1,0 +1,14 @@
+/* Select all <div> elements */
+div {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  /* Select all <p> elements */
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 10px;
+  }

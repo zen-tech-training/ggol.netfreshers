@@ -1,0 +1,52 @@
+// Variables
+$primary-color: #4CAF50;
+$secondary-color: #333;
+$font-size-large: 24px;
+$font-size-medium: 16px;
+$font-size-small: 14px;
+
+// Mixins
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin box-shadow($x, $y, $blur, $color) {
+    -webkit-box-shadow: $x $y $blur $color;
+    -moz-box-shadow: $x $y $blur $color;
+    box-shadow: $x $y $blur $color;
+}
+
+// Styles
+body {
+    font-family: Arial, sans-serif;
+    color: $secondary-color;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: $primary-color;
+    font-size: $font-size-large;
+}
+
+p {
+    font-size: $font-size-medium;
+    line-height: 1.5;
+}
+
+.button {
+    display: inline-block;
+    background-color: $primary-color;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    @include border-radius(5px);
+    @include box-shadow(0, 2px, 5px, rgba(0, 0, 0, 0.1));
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: darken($primary-color, 10%);
+    }
+}

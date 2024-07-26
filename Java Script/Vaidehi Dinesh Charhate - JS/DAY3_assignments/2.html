@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        2. Create a Class Hierarchy between
+            Person – Base / Super
+            Developer - Derived / Sub
+
+            Display Both objects / classes prototype, __proto__ and getPrototypeOf
+        */
+
+        function Person(name){
+            this.name = name;
+        }
+        function Developer(name,domain){
+            Person.call(this,name);
+            this.domain = domain;
+        }
+
+
+        
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment: Create a Table with Numbers</title>
+</head>
+
+<body>
+    <table id="myTable"></table>
+    <script>
+        var table = document.getElementById('myTable');
+
+        var counter = 1;
+
+        for (var i = 0; i < 3; i++) {
+            var row = document.createElement('tr');
+
+            for (var j = 0; j < 3; j++) {
+                var cell = document.createElement('td');
+
+                cell.textContent = counter;
+
+                row.appendChild(cell);
+
+                counter++;
+            }
+
+            table.appendChild(row);
+        }
+
+    </script>
+</body>
+
+</html>

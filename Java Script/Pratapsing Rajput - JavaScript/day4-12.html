@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add and Remove Classes</title>
+    <style>
+      .highlight-border {
+        border: 2px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="myInput" />
+    <button onclick="toggleBorder()">Toggle Border</button>
+
+    <script>
+      function toggleBorder() {
+        const inputElement = document.getElementById("myInput");
+        inputElement.classList.toggle("highlight-border");
+      }
+    </script>
+  </body>
+</html>

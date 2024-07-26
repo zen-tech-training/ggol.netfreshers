@@ -1,0 +1,41 @@
+/* responsive_navigation_bar.css */
+
+/* Reset some default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling for navigation bar */
+.navbar {
+    background-color: #333; /* Background color */
+    overflow: hidden; /* Clear floats */
+}
+
+.navbar a {
+    float: left; /* Float the links to the left */
+    display: block; /* Block-level elements */
+    color: #fff; /* Text color */
+    text-align: center; /* Center-align text */
+    padding: 14px 20px; /* Padding */
+    text-decoration: none; /* Remove underline */
+}
+
+.navbar a:hover {
+    background-color: #ddd; /* Hover background color */
+    color: #333; /* Hover text color */
+}
+
+.navbar a.active {
+    background-color: #4CAF50; /* Active background color */
+}
+
+/* Media queries for responsive navigation bar */
+@media screen and (max-width: 768px) {
+    .navbar a {
+        float: none; /* Remove float to stack vertically */
+        width: 100%; /* Full width for stacked links */
+        text-align: center; /* Center-align text */
+    }
+}

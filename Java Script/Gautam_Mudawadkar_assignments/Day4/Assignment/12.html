@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .first{
+        border: 1;
+        border-color: blueviolet;
+    }
+</style>
+<body>
+    <input type="text" id="input"/>
+    <button id="btn" onclick="Show()">Click</button>
+
+    <script>
+        function Show()
+        {
+                var input=document.getElementById("input");
+                if(input.classList.contains('first'))
+                {
+                    input.classList.remove("first");
+                }
+
+                else{
+                    input.classList.add("first");
+                }
+        }
+    </script>
+</body>
+</html>

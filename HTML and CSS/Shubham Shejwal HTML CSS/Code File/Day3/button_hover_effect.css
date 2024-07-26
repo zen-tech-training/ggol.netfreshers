@@ -1,0 +1,27 @@
+/* button_hover_effect.css */
+
+/* Reset some default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling for the button */
+.hover-button {
+    padding: 10px 20px; /* Padding for the button */
+    font-size: 16px; /* Font size */
+    background-color: #007bff; /* Default background color */
+    color: #fff; /* Default text color */
+    border: none; /* Remove default border */
+    cursor: pointer; /* Cursor style */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+/* Hover effect */
+.hover-button:hover {
+    background-color: #0056b3; /* Darker background color on hover */
+    color: #f0f0f0; /* Light text color on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow on hover */
+}

@@ -1,0 +1,26 @@
+/* text_fade_in_effect.css */
+
+/* Reset some default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container for the faded text */
+.fade-container {
+    width: 300px; /* Adjust container width as needed */
+    margin: 100px auto; /* Center the container */
+    text-align: center; /* Center text horizontally */
+}
+
+/* Styling for the faded text */
+.fade-text {
+    opacity: 1; /* Start with text fully visible */
+    transition: opacity 0.3s ease; /* Smooth transition for fade effect */
+}
+
+/* Fade out effect on hover */
+.fade-container:hover .fade-text {
+    opacity: 0; /* Fade out text on hover */
+}

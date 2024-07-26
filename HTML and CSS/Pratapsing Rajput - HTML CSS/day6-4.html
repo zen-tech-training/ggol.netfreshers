@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Styled Lists Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+      }
+      ol {
+        counter-reset: item;
+        list-style-type: none;
+        padding: 0;
+      }
+      ol > li {
+        counter-increment: item;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 10px;
+        margin: 10px 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      ol > li::before {
+        content: "Roman Numeral " counter(item, upper-roman) ". ";
+        font-weight: bold;
+        margin-right: 10px;
+      }
+      ul {
+        list-style-image: url("https://example.com/custom-bullet.png");
+        background-color: #f8f8f8;
+        padding: 10px 20px;
+        border: 1px solid #e0e0e0;
+        border-radius: 4px;
+      }
+      ul li {
+        margin: 5px 0;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <ol>
+      <li>Lamborghini</li>
+      <li>Ferrari</li>
+      <li>Porsche</li>
+      <li>
+        <ul>
+          <li>
+            <img
+              src="https://images.pexels.com/photos/21305003/pexels-photo-21305003/free-photo-of-silver-mercedes-amg-sl-43.jpeg?auto=compress&cs=tinysrgb&w=300"
+              alt="Mercedes"
+            />
+          </li>
+          <li>
+            <img
+              src="https://images.pexels.com/photos/11921988/pexels-photo-11921988.jpeg?auto=compress&cs=tinysrgb&w=600"
+              alt="BMW"
+            />
+          </li>
+          <li>
+            <img
+              src="https://images.pexels.com/photos/4914160/pexels-photo-4914160.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="Audi"
+            />
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </body>
+</html>

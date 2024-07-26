@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <title>Handling JSON Response</title>
+</head>
+
+<body>
+        <button onclick="fetchJsonData()">Fetch JSON Data</button>
+        <p id="title"></p>
+        <p id="body"></p>
+
+       
+    <script>
+        function fetchJsonData() {
+            var url = 'https://jsonplaceholder.typicode.com/posts/1';
+            var xhttp = new XMLHttpRequest();
+            xhttp.open('GET', url);
+            xhttp.send();
+
+            xhttp.onload = () => {
+                if (xhttp.readyState === 4) {
+                    if (xhttp.status === 200) {
+
+                        const data = JSON.parse(xhttp.responseText);
+                        console.log(typeof data);
+                        document.getElementById('title').innerText = data.title;
+                        document.getElementById('title').innerText = data.body;
+                    }
+                }
+            }
+        } 
+    </script>
+</body>
+
+</html>

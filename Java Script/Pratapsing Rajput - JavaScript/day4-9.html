@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Create Modal</title>
+
+    <style>
+      #myModal {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 200px;
+        padding: 20px;
+        background-color: white;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>
+      Assignment 9: Creating a Modal Write a JavaScript function that displays a
+      modal when a button is clicked. The modal should contain some text and a
+      close button.
+    </h1>
+    <button onclick="openModal()">Open Modal</button>
+
+    <div id="myModal">
+      <p>This is a modal.</p>
+      <button onclick="closeModal()">Close</button>
+    </div>
+
+    <script>
+      function openModal() {
+        // Get the modal element by its ID
+        const modal = document.getElementById("myModal");
+        // Show the modal (change its display style)
+        modal.style.display = "block";
+      }
+
+      function closeModal() {
+        // Get the modal element by its ID
+        const modal = document.getElementById("myModal");
+        // Hide the modal (change its display style back to none)
+        modal.style.display = "none";
+      }
+    </script>
+  </body>
+</html>

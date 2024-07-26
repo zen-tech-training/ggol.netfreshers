@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*1. Create a Shopping Cart Module, which would allow user to deal with cart data,
+            Product in Shopping Cart would be with following details.
+                productId, name, price, quantity
+            Methods provided by Module are,
+            addItem – Add Item would add one product item, if again called for the same product 
+            id, it would increase the quantity.
+            removeItem – Remove product (all quantities by product id)
+            getAllItems – Get all products details.
+            getTotalPrice - Total Price of all items in the cart
+        */
+
+        function Product(productId,name,price,quantity){
+            this.productId = productId;
+            this.name = name;
+            this.price = price;
+            this.quantity = quantity;
+
+        }
+
+        var ShoppingCart = (function(){
+            var productList  = [];
+            return{
+                addItem:function(product){
+                    if(productList.includes(product)){
+                        product.quantity++;
+                    }
+                    else
+                        productList.push(product);
+                },
+                removeItem:function(id){
+                    for(var ele in productList){
+                    if(productList[ele].productId==id)
+                        {
+                            productList.splice(ele,1);
+                        }
+                    }
+                },
+                show:function(){
+                for(let i in productList)
+                    console.log(productList[i]);
+                },
+                getTotalPrice:function(){
+                    var total = 0;
+                    for(var ele in productList){
+                        total+=((productList[ele].price)*(productList[ele].quantity));
+                    }
+                    console.log(total);
+                },
+            }
+
+            })()
+
+            var p1 = new Product(1,'shoes',4000,1);
+            var p2 = new Product(2, 'jeans',300,2);
+            var p3 = new Product(3,'umbrella',400,3);
+
+            ShoppingCart.addItem(p1);
+            ShoppingCart.addItem(p2);
+            ShoppingCart.addItem(p3);
+            ShoppingCart.addItem(p3);
+
+            ShoppingCart.show();
+
+            ShoppingCart.getTotalPrice();
+
+            ShoppingCart.removeItem(3);
+            ShoppingCart.show();
+
+            ShoppingCart.getTotalPrice();
+            
+
+    </script>
+</body>
+</html>

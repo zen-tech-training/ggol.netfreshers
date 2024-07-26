@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Clone Paragraph on Button Click</title>
+</head>
+
+<body>
+    <button id="cloneButton">Clone Paragraph</button>
+    <p id="originalParagraph">This is the original paragraph.</p>
+
+    <script>
+        var cloneButton = document.getElementById('cloneButton');
+        var originalParagraph = document.getElementById('originalParagraph');
+
+        cloneButton.addEventListener('click', function () {
+            var clonedParagraph = originalParagraph.cloneNode(true);
+
+            clonedParagraph.textContent = 'This is the cloned paragraph.';
+
+            document.body.appendChild(clonedParagraph);
+        });
+
+    </script>
+</body>
+
+</html>

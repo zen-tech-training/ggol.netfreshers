@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        1. Go for Base class Vehicle.
+
+                function Vehicle (make, model) {
+                    this.make = make;
+                    this.model = model;
+                }
+
+                And 2 derived classes
+                function Car (make, model) {
+                    this.wheels = 4;
+                }
+
+                function Bike (make, model) {
+                    this.wheels = 2;
+                }
+
+                Do the inheritance with Vehicle and Car as well as on Vehicle and Bike
+                Instantiate Car and Bike
+
+                Use type of to check the type of the Car and Bike Object
+
+                Use instance of to check Car Object is of type Vehicle, Car, or Bike
+                Use instance of to check Bike Object is of type Vehicle, Car, or Bike
+
+                Use constructor property to see whether,
+                CarObject.constructor property pointing to also check whether,
+                BikeObject.constructor property pointing to
+
+                Also check,
+                getPrototypeOf(carObj) is equal to Car.Prototype and 
+                getPrototypeOf(bikeObj) is equal to Bike.Prototype
+        */
+
+        function Vehicle (make, model) {
+            this.make = make;
+            this.model = model;
+        }
+
+        function Car (wheels,make, model) {
+            Vehicle.call(this,make, model)
+            this.wheels = 4;
+        }
+
+        function Bike (wheels,make, model) {
+            Vehicle.call(this,make, model)
+            this.wheels = 2;
+        }
+
+        Car.prototype = new Vehicle();
+        Car.prototype.constructor = Car;
+        Bike.prototype = new Vehicle();
+        Bike.prototype.constructor = Bike;
+
+        var car = new Car('abc','pqr');
+        var bike = new Bike('xyz','lmn');
+
+        console.log(typeof car);
+        console.log(typeof bike);
+
+
+        console.log(car instanceof Bike);
+        console.log(car instanceof Car);
+        console.log(car instanceof Vehicle);
+
+
+        console.log(bike instanceof Bike);
+        console.log(bike instanceof Car);
+        console.log(bike instanceof Vehicle);
+
+        console.log(car.constructor);
+        console.log(bike.constructor);
+
+        console.log(Object.getPrototypeOf(car)===Car.Prototype);
+        console.log(Object.getPrototypeOf(bike)===Bike.Prototype);
+
+    </script>
+</body>
+</html>

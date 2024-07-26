@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Comparison</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        padding: 20px;
+      }
+
+      .comparison {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two-column layout for comparison */
+        gap: 20px; /* Gap between columns */
+      }
+
+      .comparison h2 {
+        margin-top: 0; /* Remove top margin for consistency */
+      }
+
+      .comparison ul {
+        list-style-type: none; /* Remove default bullets */
+        padding-left: 0; /* Remove default padding */
+      }
+
+      .comparison ul li {
+        margin-bottom: 10px; /* Space between list items */
+      }
+
+      .comparison ol {
+        list-style-type: decimal; /* Use default decimal numbering for ordered list */
+        padding-left: 20px; /* Indent ordered list */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="comparison">
+      <div>
+        <h2>Product A</h2>
+        <ul>
+          <li>Feature 1: Description of feature 1 in Product A.</li>
+          <li>Feature 2: Description of feature 2 in Product A.</li>
+          <li>Feature 3: Description of feature 3 in Product A.</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Product B</h2>
+        <ul>
+          <li>Feature 1: Description of feature 1 in Product B.</li>
+          <li>Feature 2: Description of feature 2 in Product B.</li>
+          <li>Feature 3: Description of feature 3 in Product B.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Additional Details</h2>
+    <ol>
+      <li>Compatibility with other devices and platforms.</li>
+      <li>Customer support options available.</li>
+      <li>Price comparison between Product A and Product B.</li>
+    </ol>
+  </body>
+</html>

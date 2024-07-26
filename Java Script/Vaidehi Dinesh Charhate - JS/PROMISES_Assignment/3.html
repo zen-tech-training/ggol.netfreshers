@@ -1,0 +1,40 @@
+<!-- Handling Errors
+Write a promise that simulates an error condition and handle it using `catch()`.
+
+Instructions: 
+1. Create a function `errorProneTask()` that returns a promise.
+2. The promise should randomly either resolve with a success message or reject with an error message.
+3. Handle both the success and error cases using `then()` and `catch()`.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var errorProneTask = new Promise((resolve,reject)=>{
+            
+            const flag = Boolean(Math.round(Math.random()));   //----------novelty
+            // console.log(rand);
+            if(flag){
+                resolve('Success!');
+            }
+            else{
+                reject('Reject!');
+            }
+        })
+
+        errorProneTask
+        .then((response)=>{
+            console.log(response);
+        })
+        .catch((response)=>{
+            console.log(response);
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Updated Complex Table Example</title>
+    <style>
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            background-color: #e6e6e6;
+        }
+        caption {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            text-align: left;
+            color: #333;
+        }
+        th, td {
+            border: 2px solid #666;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #999;
+            color: #fff;
+        }
+        tfoot {
+            font-weight: bold;
+            background-color: #ccc;
+        }
+        .nested-table {
+            width: 90%;
+            margin: 10px auto;
+        }
+        .nested-table th, .nested-table td {
+            border: 1px solid #888;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Updated Sales Data Report</h1>
+
+    <table>
+        <caption>Annual Sales Data by Region</caption>
+        <thead>
+            <tr>
+                <th>Region</th>
+                <th>Annual Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>North America</td>
+                <td>460</td>
+            </tr>
+            <tr>
+                <td>South America</td>
+                <td>350</td>
+            </tr>
+            <tr>
+                <td>Europe</td>
+                <td>620</td>
+            </tr>
+            <tr>
+                <td>Asia</td>
+                <td>500</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Global Total</td>
+                <td>1930</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <table>
+        <caption>Detailed Sales for North America</caption>
+        <tbody>
+            <tr>
+                <td>
+                    <table class="nested-table">
+                        <thead>
+                            <tr>
+                                <th>Product Category</th>
+                                <th>Total Sales</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Electronics</td>
+                                <td>220</td>
+                            </tr>
+                            <tr>
+                                <td>Apparel</td>
+                                <td>140</td>
+                            </tr>
+                            <tr>
+                                <td>Home Goods</td>
+                                <td>100</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="myImage" src="Image/img1.png" alt="image not found">
+    <button onclick="ChangeImage()">Change Image</button>
+    <script>
+        function ChangeImage(){
+            var ele=document.getElementById('myImage');
+            ele.setAttribute("src","image/img2.png")
+        }
+    </script>
+</body>
+</html>

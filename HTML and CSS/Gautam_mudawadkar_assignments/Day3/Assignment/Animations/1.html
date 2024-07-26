@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fade In Text Animation</title>
+    <style>
+        .fade-in-text {
+            width: 300px;
+            height: 100px;
+            opacity: 0;
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+            line-height: 100px;
+            margin: 50px;
+            animation: fadeIn 3s forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="fade-in-text">
+    This text will fade in over 3 seconds.
+</div>
+
+</body>
+</html>

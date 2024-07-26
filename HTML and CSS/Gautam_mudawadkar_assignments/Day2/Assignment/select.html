@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            
+            animation-name: bg;
+            animation-duration:5s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes bg{
+            from{background-color: rgb(33, 141, 33);}
+            to{background-color: rgba(15, 70, 8, 0.726);}
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML Assignment</h1>
+    <form>
+        <label>Fruits :</label>
+        <select multiple>
+            <option value="apple">apple</option>
+            <option value="Pineapple">Pineapple</option>
+            <option value="Mango" disabled>Mango</option>
+            <option value="Blueberry">Blueberry</option>
+            <option value="Banana" selected>Banana</option>
+        </select>
+        <select>
+            <optgroup label="Citrus Fruits" class="citrus">
+                <option value="orange">Orange</option>
+                <option value="Pineapple">Pineapple</option>
+            </optgroup>
+            <optgroup label="Berries">
+                <option value="Strawberry">Strawberry</option>
+                <option value="Blueberry">Blueberry</option>
+            </optgroup>
+        </select>
+    </form>
+    <script>
+        console.log(document.querySelectorAll('optgroup'))
+    </script>
+</body>
+</html>

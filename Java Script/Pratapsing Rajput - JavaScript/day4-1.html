@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>
+      Assignment 1: Changing Text Content Write a JavaScript function that
+      changes the text content of a specific HTML element when a button is
+      clicked.
+    </h1>
+    <p id="text">Original text</p>
+    <button onclick="changeText()">Change Text</button>
+    <script>
+      function changeText() {
+        const textElement = document.getElementById("text");
+        textElement.textContent = "New text";
+      }
+    </script>
+  </body>
+</html>

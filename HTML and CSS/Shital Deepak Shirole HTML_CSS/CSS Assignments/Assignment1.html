@@ -1,0 +1,57 @@
+<!-- 1. Apply style based on id selector for 3 paragraphs. Also apply different style if id attribute will have a value as “para2”.
+2. Apply selectors for all <div> elements and all <p> elements.
+3. Apply selectors for the first <p> element that is placed immediately after <div> elements.
+4. Apply selectors for every <ul> element that is preceded by a <p> element.
+5. Apply selectors for input element which has focus. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #para1,#para2,#para3{
+            background-color: aqua;
+        }
+        div{
+            background-color: blue;
+        }
+        p{
+            background-color: blueviolet;
+        }
+        p+ul{
+            font-size: 400px;
+        }
+        input:focus{
+            background-color: chocolate;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <p id="para1">This is para p immediately after div</p>
+    </div>
+    <p id="para2">This is para2 </p>
+    <p id="para3">This is para3</p>
+
+    <div>This is div1</div>
+    <div>This is div2</div1>
+
+    <p>
+        <ul>
+            <li>This is l1</li>
+            <li>This is l2</li>
+            <li>This is l3</li>
+        </ul>
+        <ul>
+            <li>This is l1 of second ul</li>
+            <li>This is l2 of second ul</li>
+            <li>This is l3 of second ul</li>
+        </ul>
+    </p>
+
+    <input type="text" placeholder="focus me">
+</body>
+</html>

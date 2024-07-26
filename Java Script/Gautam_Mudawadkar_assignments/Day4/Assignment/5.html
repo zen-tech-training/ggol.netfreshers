@@ -1,0 +1,42 @@
+<html>
+
+<head>
+
+<title>Form Validation</title>
+
+</head>
+
+<body>
+
+<form id="myForm" onsubmit="validateForm()">
+
+<label for="email">Email:</label>
+
+<input type="text" id="email" name="email" required>
+
+<input type="submit" value="Submit">
+
+</form>
+
+<p id="message"></p>
+
+<script>
+
+    function validateForm(e)
+    {
+        console.log(e)
+        e.preventDefault()
+        //    var email=document.getElementById("email").value;
+        //    if(email.test('/^\[A-za-z]+@\S+\.+\S+$/'))
+        //    {
+        //         alert ("Passed")
+        //    }
+
+        //    else  alert ("not passed")
+
+    }
+</script>
+
+</body>
+
+</html

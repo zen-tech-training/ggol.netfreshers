@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Animal(name,sound){
+            this.name=name;
+            this.sound=sound;
+        }
+        Animal.prototype.makeSound=function(){
+            console.log(this.sound);
+        }
+        //Prototype chaining
+        Dog.prototype=new Animal("Dog","hahah");
+        Dog.prototype.constructor=Dog;
+
+        function Dog(name,sound){
+            Animal.call(this,name,sound);
+        }
+        Dog.prototype.fetch=function(){
+            console.log("In fetching name "+this.name);
+        }
+
+        var myDog=new Dog("Buddy","woof");
+        myDog.makeSound();
+        myDog.fetch();
+    </script>
+</body>
+</html>

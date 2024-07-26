@@ -1,0 +1,47 @@
+<!-- Promise Chaining
+Create a series of functions that return promises and chain them together to perform a sequence of async operations.
+
+Instructions: 
+1. Create three functions `task1() `, `task2()`, and `task3()` that return promises.
+2. Each function should resolve after a certain time with a specific message (e.g., "Task 1 complete").
+3. Chain these functions together so they execute in sequence.
+4. Log each task’s completion message. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var task1 = new Promise((resolve,reject)=>{
+        setTimeout(()=>{(resolve('from task 1'),1000)});
+       }) 
+        
+       var task2 = new Promise((resolve,reject)=>{
+        setTimeout(()=>{(resolve('from task 2'),2000)});
+       }) 
+       
+       var task3 = new Promise((resolve,reject)=>{
+        setTimeout(()=>{(resolve('from task 3'),3000)});
+       }) 
+        
+       task1
+       .then((response)=>{
+        console.log(response);
+        return task2;             //------novelty
+       })
+       .then((response)=>{
+        console.log(response);
+        return task3;
+       })
+       .then((response)=>{
+        console.log(response)
+       })
+       .catch((err) =>{
+        console.error('Error '+err);
+    });
+    </script>
+</body>
+</html>

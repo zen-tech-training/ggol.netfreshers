@@ -1,0 +1,38 @@
+/* styles.css (compiled from styles.less) */
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: #3498db;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #2ecc71;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+    background-color: #2980b9;
+}

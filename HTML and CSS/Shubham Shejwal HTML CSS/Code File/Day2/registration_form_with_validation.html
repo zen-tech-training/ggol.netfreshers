@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+  </head>
+  <body>
+    <h2>Registration Form</h2>
+    <form action="#" method="post">
+      <label for="fullname">Full Name:</label><br />
+      <input type="text" id="fullname" name="fullname" required /><br /><br />
+
+      <label for="email">Email:</label><br />
+      <input type="email" id="email" name="email" required /><br /><br />
+
+      <label for="password">Password (at least 8 characters):</label><br />
+      <input
+        type="password"
+        id="password"
+        name="password"
+        required
+        minlength="8"
+      /><br /><br />
+
+      <label for="phone">Phone Number (XXX-XXX-XXXX):</label><br />
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        required
+        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+        title="Phone number must be in the format XXX-XXX-XXXX"
+      /><br /><br />
+
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

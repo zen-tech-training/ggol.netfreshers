@@ -1,0 +1,37 @@
+/* responsive_images.css */
+
+/* Reset some default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container for images */
+.image-container {
+    max-width: 100%; /* Ensure images do not exceed container width */
+    display: flex; /* Flex container to align images */
+    justify-content: space-around; /* Space around images */
+    flex-wrap: wrap; /* Allow images to wrap on smaller screens */
+    margin-top: 20px; /* Margin for spacing */
+}
+
+/* Style for images */
+.image-container img {
+    max-width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Bottom margin for spacing */
+}
+
+/* Media queries for responsive images */
+@media screen and (min-width: 768px) {
+    .image-container img {
+        max-width: calc(50% - 20px); /* Two images per row with spacing */
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .image-container img {
+        max-width: calc(33.33% - 20px); /* Three images per row with spacing */
+    }
+}

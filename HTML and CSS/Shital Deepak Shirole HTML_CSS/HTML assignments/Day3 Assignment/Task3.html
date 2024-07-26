@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 15px;
+            border: 1px solid black;
+            text-align: left;
+        }
+        caption {
+            padding: 10px;
+            caption-side: top;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .nested-table {
+            width: 100%;
+            border: none;
+        }
+        .nested-table td {
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Sales Data</h2>
+
+<table>
+    <caption>Quarterly Sales Figures</caption>
+    <thead>
+        <tr>
+            <th>Quarter</th>
+            <th>Sales</th>
+            <th>Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Q1</td>
+            <td>$20000</td>
+            <td>
+                <table class="nested-table">
+                    <tr>
+                        <td>January: $5000</td>
+                    </tr>
+                    <tr>
+                        <td>February: $7000</td>
+                    </tr>
+                    <tr>
+                        <td>March: $8000</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- More rows can be added here -->
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="2">Total Sales</td>
+            <td>$20000</td>
+        </tr>
+    </tfoot>
+</table>
+
+</body>
+</html>

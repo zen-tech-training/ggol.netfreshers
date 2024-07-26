@@ -1,0 +1,28 @@
+@primary-color: #3498db;
+@secondary-color: #2ecc71;
+@font-size-large: 18px;
+@font-size-medium: 16px;
+@font-size-small: 14px;
+
+.border-radius(@radius) {
+  border-radius: @radius;
+}
+
+.box-shadow(@x, @y, @blur, @color) {
+  box-shadow: @x @y @blur @color;
+}
+
+body {
+  font-size: @font-size-medium;
+  color: @primary-color;
+}
+
+h1 {
+  font-size: @font-size-large;
+  .border-radius(5px);
+}
+
+p {
+  color: @secondary-color;
+  .box-shadow(0px, 2px, 5px, rgba(0, 0, 0, 0.3));
+}

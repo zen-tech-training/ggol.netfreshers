@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Simple GET Request</title>
+  </head>
+
+  <body>
+    <p>
+      Basic Promise Write a function that returns a promise which resolves after
+      a specified time with a success message. Instructions: 1. Create a
+      function `wait(ms)` that returns a promise. 2. The promise should resolve
+      with a message "Completed after X milliseconds" where `X` is the input to
+      the function. 3. Test the function by calling it with different time
+      values and logging the result.
+    </p>
+    <button onclick="makeGetRequest()">Fetch Data</button>
+    <p id="response"></p>
+
+    <script>
+      function makeGetRequest() {
+        fetch("https://jsonplaceholder.typicode.com/posts/1")
+          .then((response) => response.json())
+          .then((data) => {
+            document.getElementById("response").textContent =
+              JSON.stringify(data);
+          })
+          .catch((error) => {
+            document.getElementById("response").textContent =
+              "Error fetching data";
+          });
+      }
+    </script>
+  </body>
+</html>

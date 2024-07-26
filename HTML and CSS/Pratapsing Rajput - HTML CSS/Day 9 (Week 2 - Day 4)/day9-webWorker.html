@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prime Number Web Worker</title>
+  </head>
+  <body>
+    <input type="number" id="limit" placeholder="Enter a limit" />
+    <div id="result"></div>
+
+    <script>
+      const inputElement = document.getElementById("limit");
+      const resultElement = document.getElementById("result");
+
+      inputElement.addEventListener("change", function () {
+        const limit = parseInt(inputElement.value);
+        const worker = new Worker("worker.js");
+        worker.postMessage(limit);
+
+        worker.onmessage = function (e) {
+          const primeCount = e.data;
+          resultElement.textContent = `Found ${primeCount} prime numbers up to ${limit}`;
+          worker.terminate();
+        };
+      });
+      onmessage = function (e) {
+        const limit = e.data;
+        const primeCount = countPrimes(limit);
+        postMessage(primeCount);
+      };
+
+      function countPrimes(limit) {
+        let count = 0;
+        for (let num = 2; num <= limit; num++) {
+          if (isPrime(num)) {
+            count++;
+          }
+        }
+        return count;
+      }
+
+      function isPrime(num) {
+        if (num <= 1) {
+          return false;
+        }
+        for (let i = 2; i <= Math.sqrt(num); i++) {
+          if (num % i === 0) {
+            return false;
+          }
+        }
+        return true;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Update Image Source</title>
+  </head>
+
+  <body>
+    <h1>
+      Assignment 7: Updating Attributes Write a JavaScript function that updates
+      the `src` attribute of an image when a button is clicked
+    </h1>
+    <img id="myImage" style="height: 200px" src="zensartech.png" alt="Image" />
+    <button onclick="changeImage()">Change Image</button>
+    <script>
+      function changeImage() {
+        const myImage = document.getElementById("myImage");
+        myImage.src = "zensar.jfif"; // Update the src attribute
+      }
+    </script>
+  </body>
+</html>

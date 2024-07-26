@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact List with Custom Data Attributes</title>
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      th,
+      td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Phone Number</th>
+          <th>Email Address</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          data-id="1"
+          data-phone="123-456-7890"
+          data-email="john.doe@example.com"
+        >
+          <td>John Doe</td>
+          <td>123-456-7890</td>
+          <td>john.doe@example.com</td>
+        </tr>
+        <tr
+          data-id="2"
+          data-phone="987-654-3210"
+          data-email="jane.smith@example.com"
+        >
+          <td>Jane Smith</td>
+          <td>987-654-3210</td>
+          <td>jane.smith@example.com</td>
+        </tr>
+        <tr
+          data-id="3"
+          data-phone="555-123-4567"
+          data-email="michael.johnson@example.com"
+        >
+          <td>Michael Johnson</td>
+          <td>555-123-4567</td>
+          <td>michael.johnson@example.com</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

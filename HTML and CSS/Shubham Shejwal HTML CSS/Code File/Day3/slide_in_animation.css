@@ -1,0 +1,26 @@
+/* slide_in_animation.css */
+
+/* Reset some default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling for the slide-in heading */
+.slide-in-heading {
+    font-size: 36px; /* Adjust font size as needed */
+    position: relative; /* Ensure positioning context */
+    left: -100%; /* Initially position off-screen to the left */
+    animation: slideInAnimation 1s forwards; /* Animation properties */
+}
+
+/* Keyframes for slide-in animation */
+@keyframes slideInAnimation {
+    0% {
+        left: -100%; /* Start off-screen to the left */
+    }
+    100% {
+        left: 0; /* Slide in to final position */
+    }
+}

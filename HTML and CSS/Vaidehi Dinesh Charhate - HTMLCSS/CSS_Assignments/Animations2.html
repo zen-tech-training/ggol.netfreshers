@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Pulsing Button</title>
+    <style>
+      
+.pulse-button {
+    width: 150px; 
+    height: 50px; 
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    animation: pulse 2s infinite alternate; 
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1); 
+    }
+}
+
+    </style>
+</head>
+<body>
+    <button class="pulse-button">Click Me</button>
+</body>
+</html>

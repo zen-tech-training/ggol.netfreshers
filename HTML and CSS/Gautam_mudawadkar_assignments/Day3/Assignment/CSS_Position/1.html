@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Header Webpage</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+        }
+        .fixed-header {
+            width: 100%;
+            position: fixed;
+            background: #333;
+            padding: 10px 0;
+            color: #fff;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .content {
+            margin-top: 60px; /* Same height as the fixed header */
+            padding: 15px;
+            height: 2000px; /* Added for the sake of demonstration */
+        }
+    </style>
+</head>
+<body>
+
+<div class="fixed-header">
+    <div class="container">
+        <h1>Fixed Header</h1>
+    </div>
+</div>
+
+<div class="content">
+    <p>Scroll down to see the fixed header staying on top.</p>
+</div>
+
+</body>
+</html>

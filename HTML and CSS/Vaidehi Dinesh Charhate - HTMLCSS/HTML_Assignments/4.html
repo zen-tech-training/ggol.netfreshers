@@ -1,0 +1,48 @@
+<!-- Task: 
+1. Enhance the HTML file from Assignment 3.
+2. Add a `<style>` section within the `<head>` of your HTML file.
+3. Apply CSS rules to style the `<ul>` and `<ol>` lists differently.
+   - Change the bullet points for `<ul>` to a custom image or style.
+   - Change the numbering style for `<ol>` to use uppercase Roman numerals.
+4. Adjust padding, margins, or font styles to improve readability and aesthetics.
+5. Save and preview the styled lists in a browser to see the CSS effects.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            list-style-type: square;
+            padding: 10 10 10 10;
+            margin: 20 20 20 20;
+            font-style: oblique;
+        }
+        ol{
+            list-style-type: upper-roman;
+            padding: 10 10 10 10;
+            margin: 20 20 20 20;
+            font-style:inherit;
+        }
+    </style>
+</head>
+<body>
+    <ol>
+        <li>India</li>
+        <li>SriLanka</li>
+        <li>England</li>
+        <li>West Indies</li>
+            <ul>
+                <li>Geolocation</li>
+                <li>Video Rendering</li>
+                <li>Graphics</li>
+            </ul>
+        <li>Ireland</li>
+        <li>Zimbabwe</li>
+        <li>Bangladesh</li>
+    </ol>
+</body>
+</html>

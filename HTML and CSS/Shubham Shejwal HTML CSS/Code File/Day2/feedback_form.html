@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback Form</title>
+  </head>
+  <body>
+    <h2>Feedback Form</h2>
+    <form action="#" method="post">
+      <label for="name">Name:</label><br />
+      <input type="text" id="name" name="name" required /><br /><br />
+
+      <label for="email">Email:</label><br />
+      <input type="email" id="email" name="email" required /><br /><br />
+
+      <label for="feedback">Feedback:</label><br />
+      <textarea
+        id="feedback"
+        name="feedback"
+        rows="4"
+        cols="50"
+        required
+      ></textarea
+      ><br /><br />
+
+      <label for="rating">Rating (1-10):</label><br />
+      <input
+        type="range"
+        id="rating"
+        name="rating"
+        min="1"
+        max="10"
+        value="5"
+      /><br /><br />
+
+      <label for="color">Favorite Color:</label><br />
+      <input type="color" id="color" name="color" /><br /><br />
+
+      <label for="feedbackdate">Feedback Date:</label><br />
+      <input
+        type="datetime-local"
+        id="feedbackdate"
+        name="feedbackdate"
+      /><br /><br />
+
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

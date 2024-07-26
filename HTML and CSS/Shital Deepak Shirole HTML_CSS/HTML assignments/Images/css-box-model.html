@@ -1,0 +1,79 @@
+<!-- CSS3 Box Model Examples
+
+The CSS Box Model is a fundamental concept in web design, defining how elements are structured and rendered in a browser. The box model consists of margins, borders, padding, and the content area. Here's an example demonstrating the box model and its components. -->
+
+<!-- Example 1: Basic Box Model
+
+This example illustrates how the different parts of the box model (content, padding, border, margin) are applied to an element. -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 Box Model Example</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 100px;
+            padding: 20px;
+            border: 1px solid #333;
+            margin: 15px;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">This is a box.</div>
+</body>
+</html> -->
+
+
+<!-- **Explanation**:
+- **Width and Height**: The width and height of the content area are set to 300px and 100px, respectively.
+- **Padding**: The padding inside the box is 20px, which adds space between the content and the border.
+- **Border**: The border is 5px solid, which adds a border around the padding.
+- **Margin**: The margin outside the box is 15px, creating space between the box and other elements. -->
+
+<!-- Example 2: Box-Sizing Property
+
+This example demonstrates the `box-sizing` property, which alters the box model calculation. By default, the box model adds padding and border to the element's specified width and height. With `box-sizing: border-box`, the padding and border are included within the element's specified width and height. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 Box-Sizing Property</title>
+    <style>
+        .box-content-box {
+            width: 300px;
+            height: 100px; 
+            border: 1px solid #333;
+            background-color: lightcoral;
+            box-sizing: content-box; /* Default value */
+        }
+
+        .box-border-box {
+            width: 300px;
+            height: 100px;
+            padding: 50px;
+            border: 1px solid #333;
+            background-color: lightcoral;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="box-content-box">Content Box Model</div> <br/>
+    <div class="box-border-box">Border Box Model</div>
+</body>
+</html>
+
+<!-- **Explanation**:
+- **Content Box**: The `box-content-box` uses the default `box-sizing: content-box`, where the width and height include only the content area, and padding and border are added outside of this area.
+- **Border Box**: The `box-border-box` uses `box-sizing: border-box`, where the width and height include the content, padding, and border. -->
+
+<!-- ### Summary
+
+These examples illustrate the CSS3 box model and its components, showing how padding, borders, margins, and the `box-sizing` property affect the layout and appearance of elements. Understanding the box model is essential for creating well-structured and visually appealing web pages. --> -->

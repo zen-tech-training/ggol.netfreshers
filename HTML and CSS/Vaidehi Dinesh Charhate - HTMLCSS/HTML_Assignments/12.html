@@ -1,0 +1,70 @@
+<!-- 1. Create a new HTML file.
+2. Create a `<table>` element with a caption (`<caption>`) describing the content of the table.
+3. Use `<thead>`, `<tbody>`, and `<tfoot>` sections to organize data logically.
+4. Include at least one nested table (`<table>` within a `<td>`) to display additional details for a specific row.
+5. Populate the tables with relevant data, such as product details, sales figures, or sports statistics.
+6. Apply appropriate CSS to style nested tables, captions, and data for clarity and aesthetics.
+7. Validate the HTML and CSS code to ensure proper structure and formatting. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Table</title>
+</head>
+<style>
+    table, 
+        th, 
+        td { 
+            border: 1px solid black; 
+        } 
+        thead{
+            font-size: x-large;
+        }
+        tbody:nth-child(2){
+            background-color: lemonchiffon;
+        }
+        
+</style>
+<body>
+    <table>
+        <thead>
+            
+                <th>Product Name</th>
+                <th>Product Price</th>
+                <th>Product Quantity</th>
+           
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Bat</td>
+                <td>20</td>
+                <td>300</td>
+
+            </tr>
+            <tr>
+                <td>Ball</td>
+                <td>40</td>
+                <td>400</td>
+
+            </tr>
+            <tr>
+                <td>Stumps</td>
+                <td>50</td>
+                <td>500</td>
+
+            </tr>
+            <tfoot>
+                <tr>
+                    <td colspan="2">Total</td>
+                    <!-- <td></td> -->
+                    <td>3</td>
+                </tr>
+            </tfoot>
+        </tbody>
+        <caption>Sales statistics</caption>
+    </table>
+</body>
+</html>

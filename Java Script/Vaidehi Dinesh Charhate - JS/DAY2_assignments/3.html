@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         /*   - Create a constructor function `BankAccount` with a private variable `balance`.
+               - Add methods `deposit`, `withdraw`, and `getBalance` to manage the balance.
+         */
+        function BankAccount(balance){
+            var balance = balance;
+            this.getBalance = function(){
+                console.log(balance);
+            }
+            this.deposit = function(depo){
+                balance+=depo;
+                console.log('deposited rs'+depo+' and the balance is rs'+this.getBalance());
+
+            }
+            this.withdraw = function(wth){
+                if((balance-wth)>=0){
+                    balance-=wth;
+                    console.log('withdrawn rs'+wth+' and the balance is rs'+this.getBalance());
+                }
+            }
+           
+        }
+        var acc = new BankAccount(1200);
+        acc.getBalance();
+        acc.withdraw(450);
+        acc.deposit(450);
+        acc.getBalance();
+
+        
+    </script>
+   
+</body>
+</html>

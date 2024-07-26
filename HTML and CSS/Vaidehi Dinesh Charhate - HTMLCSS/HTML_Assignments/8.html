@@ -1,0 +1,30 @@
+<!-- 1. Create a new HTML file.
+2. Include a large image using the `<img>` tag.
+3. Implement responsive image techniques by using the `srcset` and `sizes` attributes.
+   - Provide multiple image sources (`srcset`) for different screen resolutions.
+   - Use the `sizes` attribute to specify different image sizes based on viewport width (`(max-width: 600px) 400px, 800px`).
+4. Add CSS to ensure images scale appropriately on different devices (`max-width: 100%; height: auto;`).
+5. Test the responsiveness of the images by resizing the browser window and viewing the webpage on different devices. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img{
+        max-width: 600px;
+
+    }
+</style>
+<body>
+    <picture>
+        <source media="(min-width:650px)" srcset="./html.jfif">
+        <source media="(min-width:465px)" srcset="./css.jfif">
+        <img src="./js.jfif" alt="js" style="width:auto">
+    </picture>
+
+    
+</body>
+</html>

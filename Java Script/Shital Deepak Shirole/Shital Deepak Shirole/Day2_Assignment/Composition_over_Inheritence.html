@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function User(username,password,Address){
+            this.username=username;
+            this.password=password;
+            this.Address=Address;
+        }
+        User.prototype.getAddress=function(){
+            return this.Address.street+" "+this.Address.city+" "+this.Address.country;
+        }
+        function Address(street,city,country){
+            this.street=street;
+            this.city=city;
+            this.country=country;
+        }
+        
+        var a1=new Address("Thite Nagar","Pune","India");
+
+        var u1=new User("shital123","shital@123",a1);
+        console.log(u1.getAddress());
+    </script>
+</body>
+</html>

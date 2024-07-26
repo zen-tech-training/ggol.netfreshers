@@ -1,0 +1,27 @@
+/* image_zoom_effect.css */
+
+/* Reset some default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container for the image */
+.image-container {
+    width: 400px; /* Adjust container width as needed */
+    overflow: hidden; /* Hide overflow for smoother zoom effect */
+}
+
+/* Styling for the image */
+.zoom-image {
+    display: block; /* Ensure image is displayed as a block element */
+    width: 100%; /* Make image responsive within its container */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+}
+
+/* Zoom effect on hover */
+.zoom-image:hover {
+    transform: scale(1.1); /* Scale up the image by 10% on hover */
+}

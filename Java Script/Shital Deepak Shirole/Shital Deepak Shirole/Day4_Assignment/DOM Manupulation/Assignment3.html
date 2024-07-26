@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="Mylist">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ul>
+    <button onclick="RemoveItem()">Remove Item</button>
+    <script>
+        function RemoveItem() {
+            var ele = document.getElementById('Mylist');
+            var count = ele.childNodes.length;
+            if (ele.hasChildNodes()) {
+                ele.removeChild(ele.children[count - 6]);
+            }
+        }
+
+    </script>
+</body>
+
+</html>

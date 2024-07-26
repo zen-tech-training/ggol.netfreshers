@@ -1,0 +1,51 @@
+// styles.scss
+
+// Variables
+$primary-color: #3498db; // Blue
+$secondary-color: #2ecc71; // Green
+$font-size-large: 24px;
+$font-size-medium: 18px;
+$font-size-small: 14px;
+
+// Mixins
+@mixin border-radius($radius) {
+    border-radius: $radius;
+}
+
+@mixin box-shadow($x, $y, $blur, $color) {
+    box-shadow: $x $y $blur $color;
+}
+
+// Styles
+body {
+    font-family: Arial, sans-serif;
+    font-size: $font-size-medium;
+    color: $primary-color;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+
+    h1 {
+        font-size: $font-size-large;
+        color: $secondary-color;
+    }
+
+    p {
+        font-size: $font-size-small;
+        line-height: 1.5;
+    }
+
+    .button {
+        background-color: $primary-color;
+        color: white;
+        padding: 10px 15px;
+        text-decoration: none;
+        display: inline-block;
+        @include border-radius(5px);
+        @include box-shadow(0px, 4px, 6px, rgba(0, 0, 0, 0.1));
+
+        &:hover {
+            background-color: darken($primary-color, 10%);
+        }
+    }
+}

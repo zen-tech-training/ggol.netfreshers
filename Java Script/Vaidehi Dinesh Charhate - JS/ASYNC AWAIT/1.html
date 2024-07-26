@@ -1,0 +1,28 @@
+<!-- Instructions: 
+1. Create an async function named `fetchData`.
+2. Inside the function, use `setTimeout` to simulate fetching data from a server. Use `await` to wait for 2 seconds.
+3. After 2 seconds, log a message to the console saying, "Data fetched!".
+4. Call the `fetchData` function and observe the output. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function fetchData() {
+    
+            await new Promise((resolve) => setTimeout(resolve, 2000));
+            console.log("Data fetched! 🌟");
+}
+
+
+fetchData();
+
+
+    </script>
+</body>
+</html>

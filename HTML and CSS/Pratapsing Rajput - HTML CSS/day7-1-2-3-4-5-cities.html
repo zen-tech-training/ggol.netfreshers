@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Indian Cities Dropdown</title>
+    <style>
+      body {
+        background-color: #1d1818;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      p {
+        font-weight: 700;
+        margin-top: 0;
+      }
+
+      .selection {
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 10px;
+        width: 200px;
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+
+      .selection:focus {
+        outline: none;
+        border-color: rgb(165, 0, 0);
+        box-shadow: 0 0 5px rgba(165, 0, 0, 0.5);
+      }
+
+      select[multiple] {
+        height: auto;
+        min-height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p>
+        1: Basic Dropdown Menu: Create a simple dropdown menu with a list of
+        cities.
+      </p>
+      <select class="selection">
+        <option value="mumbai">Mumbai</option>
+        <option value="delhi">Delhi</option>
+        <option value="bengaluru">Bengaluru</option>
+        <option value="kolkata">Kolkata</option>
+        <option value="chennai">Chennai</option>
+      </select>
+
+      <p>
+        2: Pre-selected Option: Create a dropdown menu where "Delhi" is
+        pre-selected by default.
+      </p>
+      <select class="selection">
+        <option value="mumbai">Mumbai</option>
+        <option value="delhi" selected>Delhi</option>
+        <option value="bengaluru">Bengaluru</option>
+        <option value="kolkata">Kolkata</option>
+        <option value="chennai">Chennai</option>
+      </select>
+
+      <p>
+        3: Grouped Options: Create a dropdown menu with grouped options based on
+        states.
+      </p>
+      <select class="selection">
+        <optgroup label="Maharashtra">
+          <option value="mumbai">Mumbai</option>
+          <option value="pune">Pune</option>
+        </optgroup>
+        <optgroup label="Delhi">
+          <option value="delhi">Delhi</option>
+        </optgroup>
+        <optgroup label="Karnataka">
+          <option value="bengaluru">Bengaluru</option>
+          <option value="mysuru">Mysuru</option>
+        </optgroup>
+        <optgroup label="West Bengal">
+          <option value="kolkata">Kolkata</option>
+          <option value="darjeeling">Darjeeling</option>
+        </optgroup>
+        <optgroup label="Tamil Nadu">
+          <option value="chennai">Chennai</option>
+          <option value="coimbatore">Coimbatore</option>
+        </optgroup>
+      </select>
+
+      <p>
+        4: Disabled Options: Create a dropdown menu with some options disabled.
+      </p>
+      <select class="selection">
+        <option value="mumbai">Mumbai</option>
+        <option value="delhi" disabled>Delhi</option>
+        <option value="bengaluru">Bengaluru</option>
+        <option value="kolkata">Kolkata</option>
+        <option value="chennai" disabled>Chennai</option>
+      </select>
+
+      <p>
+        5: Multiple Selection: Create a dropdown menu that allows multiple
+        selections.
+      </p>
+      <select multiple class="selection">
+        <option value="mumbai">Mumbai</option>
+        <option value="delhi">Delhi</option>
+        <option value="bengaluru">Bengaluru</option>
+        <option value="kolkata">Kolkata</option>
+        <option value="chennai">Chennai</option>
+      </select>
+    </div>
+  </body>
+</html>

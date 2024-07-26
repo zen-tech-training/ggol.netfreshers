@@ -1,0 +1,37 @@
+<!-- Using `Promise.all()`
+Create multiple promises and use `Promise.all()` to wait for all of them to complete.
+
+ Instructions: 
+1. Create three functions `taskA()`, `taskB()`, and `taskC()` that return promises.
+2. Each function should resolve after a certain time with a specific message.
+3. Use `Promise.all()` to execute these tasks concurrently and log the results once all tasks are complete.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const promise1 = new Promise((resolve,reject) =>{
+            setTimeout(resolve,12000,'promise 1');
+        });
+        const promise2 =new Promise((resolve,reject) =>{
+            setTimeout(resolve,2000,'promise 2');
+        });
+        const promise3 = new Promise((resolve,reject) =>{
+            setTimeout(resolve,1800,'promise 3');
+        });
+
+        Promise.all([promise1,promise2,promise3])
+        .then((values) =>{
+            console.log(values);
+        })
+        .catch(err =>{
+            console.error('Error '+err);
+        })
+    </script>
+</body>
+</html>

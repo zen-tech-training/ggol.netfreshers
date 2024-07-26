@@ -1,0 +1,51 @@
+// styles.less
+
+// Variables
+@primary-color: #3498db;
+@secondary-color: #2ecc71;
+@card-bg-color: #f4f4f4;
+@card-hover-color: #e6e6e6;
+
+// Styles
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+
+    .card {
+        background-color: @card-bg-color;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: @card-hover-color;
+        }
+
+        h2 {
+            color: @primary-color;
+            margin-top: 0;
+        }
+
+        p {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .button {
+            background-color: @secondary-color;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: darken(@secondary-color, 10%);
+            }
+        }
+    }
+}

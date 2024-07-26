@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add List Item</title>
+  </head>
+
+  <body>
+    <h1>
+      Assignment 2: Adding New Elements Write a JavaScript function that adds a
+      new list item to an unordered list when a button is clicked. HTML
+    </h1>
+    <ul id="myList">
+      <li>Item 1</li>
+      <li>Item 2</li>
+    </ul>
+
+    <button onclick="addListItem()">Add Item</button>
+
+    <script>
+      let itemCount = 2; // Initialize item count
+
+      function addListItem() {
+        const ulElement = document.getElementById("myList"); // Get the unordered list element
+        itemCount++; // Increment item count
+        const newLi = document.createElement("li"); // Create a new list item
+        newLi.textContent = `Item ${itemCount}`; // Set the text content with incremental number
+        ulElement.appendChild(newLi); // Append the new list item to the unordered list
+      }
+    </script>
+  </body>
+</html>

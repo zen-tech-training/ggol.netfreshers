@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Simple GET Request</title>
+
+</head>
+
+<body>
+
+<button onclick="makeGetRequest()">Fetch Data</button>
+<p id="response"></p>
+
+<script>
+    function makeGetRequest()
+    {
+         var url="https://jsonplaceholder.typicode.com/posts/1";
+         var xhttp= new XMLHttpRequest();
+
+         xhttp.open('GET',url,true);
+         xhttp.send();
+        
+
+         xhttp.onreadystatechange=function(){
+        if(xhttp.readyState==4 && xhttp.status==200)
+         {
+              console.log(xhttp.response)
+                document.getElementById('response').innerText+=xhttp.responseText;
+
+         }
+         }
+    }
+</script>
+
+</body>
+
+</html

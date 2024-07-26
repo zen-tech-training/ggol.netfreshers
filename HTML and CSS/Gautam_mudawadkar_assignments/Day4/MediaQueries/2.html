@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Images</title>
+    <style>
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        /* Media query for screens up to 600px wide */
+        @media (max-width: 600px) {
+            img {
+                width: 50%;
+            }
+        }
+        /* Media query for screens between 601px and 1000px wide */
+        @media (min-width: 601px) and (max-width: 1000px) {
+            img {
+                width: 75%;
+            }
+        }
+        /* Media query for screens wider than 1000px */
+        @media (min-width: 1001px) {
+            img {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="image1.jpg" alt="Responsive Image 1">
+    <img src="image2.jpg" alt="Responsive Image 2">
+    <img src="image3.jpg" alt="Responsive Image 3">
+</body>
+</html>

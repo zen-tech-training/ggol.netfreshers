@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Complex Table Structure</title>
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: Arial, sans-serif;
+        margin-bottom: 20px;
+      }
+
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+        border: 1px solid #ddd;
+      }
+
+      th {
+        background-color: #f2f2f2;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      caption {
+        font-weight: bold;
+        margin: 10px;
+      }
+
+      /* Styles for the nested table */
+      .nested-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+      }
+
+      .nested-table th,
+      .nested-table td {
+        padding: 5px;
+        border: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Product Sales Data</h1>
+
+    <table>
+      <caption>
+        Monthly Sales Overview
+      </caption>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Description</th>
+          <th>Price ($)</th>
+          <th>Sales (Units)</th>
+          <th>Total Sales ($)</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Product A</td>
+          <td>High-quality headphones</td>
+          <td>99.99</td>
+          <td>150</td>
+          <td>14,998.50</td>
+          <td>
+            <table class="nested-table">
+              <thead>
+                <tr>
+                  <th>Region</th>
+                  <th>Sales (Units)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>North</td>
+                  <td>70</td>
+                </tr>
+                <tr>
+                  <td>South</td>
+                  <td>80</td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td>Product B</td>
+          <td>Wireless Bluetooth Speaker</td>
+          <td>49.99</td>
+          <td>200</td>
+          <td>9,998.00</td>
+          <td>
+            <table class="nested-table">
+              <thead>
+                <tr>
+                  <th>Region</th>
+                  <th>Sales (Units)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>North</td>
+                  <td>120</td>
+                </tr>
+                <tr>
+                  <td>South</td>
+                  <td>80</td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td>Product C</td>
+          <td>Smartphone with 128GB Storage</td>
+          <td>599.99</td>
+          <td>100</td>
+          <td>59,999.00</td>
+          <td>
+            <table class="nested-table">
+              <thead>
+                <tr>
+                  <th>Region</th>
+                  <th>Sales (Units)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>North</td>
+                  <td>50</td>
+                </tr>
+                <tr>
+                  <td>South</td>
+                  <td>50</td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td><strong>Total</strong></td>
+          <td></td>
+          <td></td>
+          <td><strong>450</strong></td>
+          <td><strong>84,995.50</strong></td>
+          <td></td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>

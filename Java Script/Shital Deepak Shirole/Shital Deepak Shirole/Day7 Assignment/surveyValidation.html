@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey Form</title>
+</head>
+<body>
+  <h2>Survey Form</h2>
+  <form action="#" method="post" onsubmit="return validateForm()">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="age">Age:</label><br>
+    <input type="number" id="age" name="age" required min="18" max="100"><br><br>
+
+    <label for="dateofvisit">Date of Visit:</label><br>
+    <input type="date" id="dateofvisit" name="dateofvisit" required><br><br>
+
+    <label for="timeofvisit">Time of Visit:</label><br>
+    <input type="time" id="timeofvisit" name="timeofvisit" required><br><br>
+
+    <label for="satisfaction">Satisfaction Level (1-10):</label><br>
+    <input type="range" id="satisfaction" name="satisfaction" min="1" max="10" required><br><br>
+
+    <label for="comments">Comments:</label><br>
+    <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br><br>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <script>
+    function validateForm() {
+      // JavaScript validation can be added here if needed
+      return true; // Return true to submit the form
+    }
+  </script>
+</body>
+</html>

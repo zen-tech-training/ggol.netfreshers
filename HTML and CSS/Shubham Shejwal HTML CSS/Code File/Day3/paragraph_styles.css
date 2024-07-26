@@ -1,0 +1,13 @@
+
+/* Apply style based on id selector for all paragraphs */
+p {
+    font-size: 16px;
+    color: black;
+    margin-bottom: 10px;
+  }
+  
+  /* Apply different style if id attribute is "para2" */
+  #para2 {
+    font-weight: bold;
+    color: blue;
+  }

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> 
+    <title>Slide-In Heading</title>'
+    <style>
+.slide-in-heading {
+    font-size: 36px; 
+    position: relative;
+    left: -100%;
+    animation: slideIn 1s forwards; 
+}
+
+@keyframes slideIn {
+    to {
+        left: 0;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <h1 class="slide-in-heading">Welcome to the Enchanted Realm</h1>
+</body>
+</html>

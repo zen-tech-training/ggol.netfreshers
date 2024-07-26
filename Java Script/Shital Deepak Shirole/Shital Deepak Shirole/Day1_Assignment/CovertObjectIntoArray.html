@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const animal=[
+            {
+            type:'lion',
+            iswild:true,
+        },
+        {
+            type:'tiger',
+            iswild:false,
+        },
+    ]
+        // Only keys 
+        const keys=Object.keys(animal);
+        console.log(keys.toString());
+
+        // only values 
+        const values=Object.values(animal);
+        console.log(values.toString());
+
+        // Both key and value 
+        const entries1=Object.entries(animal);
+        console.log(entries1);
+    </script>
+</body>
+</html>

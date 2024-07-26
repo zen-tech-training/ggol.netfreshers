@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Remove List Item</title>
+  </head>
+
+  <body>
+    <h1>
+      Assignment 3: Removing Elements Write a JavaScript function that removes
+      the last list item from an unordered list when a button is clicked.
+    </h1>
+    <ul id="myList">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+    <button onclick="removeListItem()">Remove Last Item</button>
+    <script>
+      function removeListItem() {
+        const ulElement = document.getElementById("myList"); // Get the unordered list element
+        const lastLi = ulElement.lastElementChild; // Get the last list item
+        if (lastLi) {
+          ulElement.removeChild(lastLi); // Remove the last list item
+        }
+      }
+    </script>
+  </body>
+</html>

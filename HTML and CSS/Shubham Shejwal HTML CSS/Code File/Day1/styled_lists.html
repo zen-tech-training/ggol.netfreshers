@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Styled Lists Example</title>
+    <style>
+      ol {
+        list-style-type: upper-roman;
+        margin-left: 20px;
+        padding-left: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      ul {
+        list-style-type: none;
+        margin-left: 20px;
+        padding-left: 0;
+      }
+
+      ul li {
+        background-image: url("bullet.png"); /* Replace with your bullet image URL */
+        background-size: 10px;
+        background-repeat: no-repeat;
+        padding-left: 20px;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <ol>
+      <li>Maharashtra</li>
+      <li>
+        Delhi
+        <ul>
+          <li>Chole Bature</li>
+          <li>Mithai</li>
+          <li>Kulcha</li>
+        </ul>
+      </li>
+      <li>Rajasthan</li>
+      <li>Kolkata</li>
+    </ol>
+  </body>
+</html>

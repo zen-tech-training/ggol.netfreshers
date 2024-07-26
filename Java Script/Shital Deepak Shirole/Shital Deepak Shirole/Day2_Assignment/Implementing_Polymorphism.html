@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Shape(){
+
+        }
+        Shape.prototype.getArea=function(){
+            return 0;
+        }
+
+        Square.prototype=new Shape();
+        Square.prototype.constructor=Square;
+
+        function Square(sideLength){
+            this.sideLength=sideLength;
+        }
+
+        Square.prototype.getArea=function(){
+            return "Area of Square "+this.sideLength*this.sideLength;
+        }
+
+
+        Triangle.prototype=new Square(2);
+        Triangle.prototype.constructor=Triangle;
+
+        function Triangle(base,height){
+            this.base=base;
+            this.height=height;
+        }
+
+        Triangle.prototype.getArea=function(){
+            return "Area of Triangle is "+1/2*this.base*this.height;
+        }
+
+        var Triangle1=new Triangle(4,5);
+        console.log(Triangle1.getArea());
+        var Square1=new Square(5);
+        console.log(Square1.getArea());
+        var shape1=new Shape();
+        console.log(shape1.getArea());
+        var Triangle2=new Shape();
+        console.log(Triangle2.getArea());
+
+
+        
+    </script>
+</body>
+</html>

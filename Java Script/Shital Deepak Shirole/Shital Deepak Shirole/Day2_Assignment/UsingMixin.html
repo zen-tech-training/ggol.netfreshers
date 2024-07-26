@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var Flyable={
+            fly:function(){
+                console.log("fly method");
+            }
+        }
+
+        var Swimmable={
+            swim:function(){
+                console.log("swim method");
+            }
+        }
+
+        function Duck(){
+
+        }
+
+        Object.assign(Duck.prototype,Flyable,Swimmable);
+        // Object.assign(Duck.prototype,Swimmable);
+
+        var d1=new Duck();
+        d1.fly();
+        d1.swim();
+    </script>
+</body>
+</html>

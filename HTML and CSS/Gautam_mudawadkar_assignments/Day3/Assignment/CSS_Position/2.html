@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Sidebar Layout</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        .container {
+            display: flex;
+        }
+        .sidebar {
+            width: 200px;
+            position: -webkit-sticky; /* Safari */
+            position: sticky;
+            top: 0;
+            background-color: #f7f7f7;
+            padding: 10px;
+            height: 100vh; /* Full height of the viewport */
+        }
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+            height: 2000px; /* Added for the sake of demonstration */
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+            padding: 8px;
+            margin-bottom: 8px;
+            background-color: #eaeaea;
+            border-radius: 4px;
+        }
+        li a:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="sidebar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about-us">About Us</a></li>
+            <li><a href="#contact-us">Contact Us</a></li>
+            <li><a href="#services">Services</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <h1>Main Content</h1>
+        <p>Scroll down to see the sidebar becoming sticky as you scroll past it.</p>
+    </div>
+</div>
+
+</body>
+</html>

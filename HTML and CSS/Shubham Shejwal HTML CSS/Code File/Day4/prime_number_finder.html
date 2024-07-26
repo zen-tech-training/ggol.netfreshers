@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prime Number Finder</title>
+  </head>
+  <body>
+    <h1>Prime Number Finder</h1>
+    <label for="limit">Enter a limit:</label>
+    <input type="number" id="limit" min="1" />
+    <button id="calculate">Calculate Primes</button>
+    <p id="result"></p>
+
+    <script>
+      // Check if the browser supports Web Workers
+      if (window.Worker) {
+        const worker = new Worker("prime_worker.js");
+
+        // Listen for messages from the worker
+        worker.onmessage = function (event) {
+          const primeCount = event.data;
+          document.getElementById(
+            "result"
+          ).textContent = `Found ${primeCount} prime numbers up to ${
+            document.getElementById("limit").value
+          }`;
+        };
+
+        // Handle button click
+        document.getElementById("calculate").onclick = function () {
+          const limit = parseInt(document.getElementById("limit").value);
+          if (!isNaN(limit) && limit > 0) {
+            // Send the limit to the worker
+            worker.postMessage(limit);
+          } else {
+            alert("Please enter a valid limit greater than 0.");
+          }
+        };
+      } else {
+        alert("Your browser does not support Web Workers.");
+      }
+    </script>
+  </body>
+</html>
